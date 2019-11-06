@@ -71,15 +71,56 @@ html {
 }
 
 .topMenuText {
+	float: right;
+	line-height: 85px;
+	margin-left: 30px;
+}
+
+.topMenuText a {
 	text-align: right;
 	color: #263742;
 	font-family: Montserrat, sans-serif;
 	font-size: 14px;
 	font-weight: bold;
-	line-height: 85px;
 	text-transform: uppercase;
-	margin-left: 30px;
 	text-decoration: none;
+}
+
+#topMenuTextWord {
+	position: absolute;
+	float: left;
+	text-align: right;
+	color: #263742;
+	font-family: Montserrat, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: none;
+	cursor: pointer;
+}
+
+#topMenuTextWord img {
+	transform: rotate(90deg);
+	position: absolute;
+	margin-top: 3px;
+	margin-left: 3px;
+	float: left;
+}
+
+#topMenuTextOne {
+	margin-top: 0px;
+}
+
+#topMenuTextTwo {
+	margin-top: 0px;
+}
+
+#topMenuTextThree {
+	margin-top: 0px;
+}
+
+#topMenuTextFour {
+	margin-top: 0px;
 }
 
 /* Верхнее социальные иконки */
