@@ -7,7 +7,7 @@
 }
 
 html {
-	
+	font-family: sans-serif;
 }
 
 .centerElement {
@@ -170,8 +170,8 @@ html {
 	font-size: 15px;
 	font-weight: 700;
 	text-transform: uppercase;
-	margin-top: 24px;
-	margin-left: 39px;
+	width: 100%;
+	text-align: center;
 }
 
 /** КОНТЕНТ **/
