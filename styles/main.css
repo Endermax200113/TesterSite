@@ -43,6 +43,7 @@ html {
 	text-decoration: none;
 	position: absolute;
 	margin-left: calc(219px + 14px + 4px);
+	transition: all.1s ease-out;
 }
 
 #topLogoTextPoint {
@@ -56,6 +57,7 @@ html {
 	line-height: calc(63.95px * 1.5);
 	text-decoration: none;
 	margin-left: calc(219px + 14px + 112px - 7px);
+	transition: all.1s ease-out;
 }
 
 /* Верхнее меню */
