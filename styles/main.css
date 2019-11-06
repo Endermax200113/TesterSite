@@ -30,6 +30,7 @@ html {
 	border-radius: 0px 0px 10px 10px;
 	cursor: pointer;
 	text-decoration: none;
+	transition: all.1s ease-out;
 }
 
 #topLogoText {

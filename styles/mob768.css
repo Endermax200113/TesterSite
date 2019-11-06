@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	/** ШАПКА **/
+	/* Логотип */
+	#topLogoBg {
+		margin-left: 80px;
+	}
+
+	#topLogoText {
+		margin-left: calc(80px + 14px + 4px);
+	}
+
+	#topLogoTextPoint {
+		margin-left: calc(80px + 14px + 112px - 7px);
+	}
+}

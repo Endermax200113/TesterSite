@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@media (min-width: 425px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 424px) {
 	/** ШАПКА **/
 	/* Логотип */
 	#topLogoBg {
