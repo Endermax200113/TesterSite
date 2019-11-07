@@ -17,7 +17,6 @@ var topMenuTextFour = document.querySelector("#topMenuTextFour");
 
 //Верхние социальные иконки
 var topSocialIcons = document.querySelector("#topSocialIcons");
-var topSocialIcon = document.querySelector(".topSocialIcon");
 
 // -! Выполнение скрипта при загрузки страницы !-
 startScript();
@@ -37,8 +36,6 @@ document.addEventListener("click", function(e) {
 				topMenuMobMaximized = true;
 			}
 		}
-	} else if (element == topSocialIcon) {
-		topSocialIconClick();
 	}
 });
 
@@ -103,7 +100,3 @@ function topMenuMobMinimize() {
 	topSocialIcons.style = "margin-top: 60px";
 }
 
-//Верхние социальные иконки
-function topSocialIconClick() {
-	alert("Вы нажали на социальную иконку!");
-}
