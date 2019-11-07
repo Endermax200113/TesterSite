@@ -30,7 +30,7 @@ html {
 	border-radius: 0px 0px 10px 10px;
 	cursor: pointer;
 	text-decoration: none;
-	transition: all.1s ease-out;
+	transition: all.2s ease-out;
 }
 
 #topLogoText {
@@ -43,7 +43,7 @@ html {
 	text-decoration: none;
 	position: absolute;
 	margin-left: calc(219px + 14px + 4px);
-	transition: all.1s ease-out;
+	transition: all.2s ease-out;
 }
 
 #topLogoTextPoint {
@@ -57,7 +57,7 @@ html {
 	line-height: calc(63.95px * 1.5);
 	text-decoration: none;
 	margin-left: calc(219px + 14px + 112px - 7px);
-	transition: all.1s ease-out;
+	transition: all.2s ease-out;
 }
 
 /* Верхнее меню */
@@ -73,7 +73,7 @@ html {
 .topMenuText {
 	line-height: 85px;
 	margin-left: 30px;
-	transition: all.1s ease-out;
+	transition: all.2s ease-out;
 }
 
 .topMenuText a {
@@ -133,6 +133,7 @@ html {
 	margin-top: 30px;
 	text-decoration: none;
 	margin-left: 15px;
+	transition: all.2s ease-out;
 }
 
 #topSocialIcons a {

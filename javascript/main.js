@@ -38,7 +38,6 @@ document.addEventListener("click", function(e) {
 
 // -! Во время изменения окна !-
 window.onresize = function(e) {
-	//alert("Размер изменился");
 	docWidth = window.innerWidth;
 	docHeight = window.innerHeight;
 
@@ -58,10 +57,8 @@ function startScript() {
 }
 
 function spotMobVersion() {
-	//alert("docWidth = " + docWidth);
 	if (docWidth >= 768) mobVersion = false;
 	else mobVersion = true;
-	//alert("mobVersion = " + mobVersion);
 }
 
 //ШАПКА
