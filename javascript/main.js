@@ -15,6 +15,10 @@ var topMenuTextTwo = document.querySelector("#topMenuTextTwo");
 var topMenuTextThree = document.querySelector("#topMenuTextThree");
 var topMenuTextFour = document.querySelector("#topMenuTextFour");
 
+//Верхние социальные иконки
+var topSocialIcons = document.querySelector("#topSocialIcons");
+var topSocialIcon = document.querySelector(".topSocialIcon");
+
 // -! Выполнение скрипта при загрузки страницы !-
 startScript();
 
@@ -33,6 +37,8 @@ document.addEventListener("click", function(e) {
 				topMenuMobMaximized = true;
 			}
 		}
+	} else if (element == topSocialIcon) {
+		topSocialIconClick();
 	}
 });
 
@@ -66,24 +72,35 @@ function spotMobVersion() {
 function topMenuMobMaximizeToPC() {
 	topMenuMobMaximized = false;
 	topMenuTextWordArrow.style = "transform: rotate(90deg)";
-	topMenuTextOne.style = "display: initial; margin-top: 0px";
-	topMenuTextTwo.style = "display: initial; margin-top: 0px";
-	topMenuTextThree.style = "display: initial; margin-top: 0px";
-	topMenuTextFour.style = "display: initial; margin-top: 0px";
+	topMenuTextOne.style = "opacity: 1; margin-top: 0px";
+	topMenuTextTwo.style = "opacity: 1; margin-top: 0px";
+	topMenuTextThree.style = "opacity: 1; margin-top: 0px";
+	topMenuTextFour.style = "opacity: 1; margin-top: 0px";
+
+	topSocialIcons.style = "margin-top: 30px";
 }
 
 function topMenuMobMaximize() {
-	topMenuTextOne.style = "display:initial; margin-top: 30px";
-	topMenuTextTwo.style = "display:initial; margin-top: calc(30px + 20px)";
-	topMenuTextThree.style = "display:initial; margin-top: calc(30px + 20px + 20px)";
-	topMenuTextFour.style = "display:initial; margin-top: calc(30px + 20px + 20px + 20px)";
+	topMenuTextOne.style = "opacity: 1; margin-top: 30px";
+	topMenuTextTwo.style = "opacity: 1; margin-top: calc(30px + 20px)";
+	topMenuTextThree.style = "opacity: 1; margin-top: calc(30px + 20px + 20px)";
+	topMenuTextFour.style = "opacity: 1; margin-top: calc(30px + 20px + 20px + 20px)";
 	topMenuTextWordArrow.style = "transform: rotate(-90deg)";
+
+	topSocialIcons.style = "margin-top: 140px";
 }
 
 function topMenuMobMinimize() {
-	topMenuTextOne.style = "display:none; margin-top: 0px";
-	topMenuTextTwo.style = "display:none; margin-top: 0px";
-	topMenuTextThree.style = "display:none; margin-top: 0px";
-	topMenuTextFour.style = "display:none; margin-top: 0px";
+	topMenuTextOne.style = "opacity: 0; margin-top: 0px";
+	topMenuTextTwo.style = "opacity: 0; margin-top: 0px";
+	topMenuTextThree.style = "opacity: 0; margin-top: 0px";
+	topMenuTextFour.style = "opacity: 0; margin-top: 0px";
 	topMenuTextWordArrow.style = "transform: rotate(90deg)";
+
+	topSocialIcons.style = "margin-top: 60px";
+}
+
+//Верхние социальные иконки
+function topSocialIconClick() {
+	alert("Вы нажали на социальную иконку!");
 }
