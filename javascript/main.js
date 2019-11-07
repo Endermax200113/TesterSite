@@ -1,7 +1,7 @@
 // -> Переменные
 //ОСНОВА
-var docWidth = screen.width;
-var docHeight = screen.height;
+var docWidth = window.innerWidth;
+var docHeight = window.innerHeight;
 var mobVersion = false;
 spotMobVersion();
 
@@ -38,15 +38,16 @@ document.addEventListener("click", function(e) {
 
 // -! Во время изменения окна !-
 window.onresize = function(e) {
-	docWidth = screen.width;
-	docHeight = screen.height;
+	//alert("Размер изменился");
+	docWidth = window.innerWidth;
+	docHeight = window.innerHeight;
 
 	if (docWidth >= 768) {
-		topMenuMobMaximizeToPC();
 		mobVersion = false;
+		topMenuMobMaximizeToPC();
 	} else {
-		if (!topMenuMobMaximized) topMenuMobMinimize();
 		mobVersion = true;
+		if (!topMenuMobMaximized) topMenuMobMinimize();
 	}
 }
 
@@ -57,8 +58,10 @@ function startScript() {
 }
 
 function spotMobVersion() {
+	//alert("docWidth = " + docWidth);
 	if (docWidth >= 768) mobVersion = false;
 	else mobVersion = true;
+	//alert("mobVersion = " + mobVersion);
 }
 
 //ШАПКА
