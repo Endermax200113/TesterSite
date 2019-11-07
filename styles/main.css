@@ -102,7 +102,6 @@ html {
 #topMenuTextWord img {
 	transform: rotate(90deg);
 	position: absolute;
-	margin-top: 3px;
 	margin-left: 3px;
 	float: left;
 }
