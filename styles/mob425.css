@@ -66,4 +66,26 @@
 	}
 
 	/** ГЛАВНЫЙ БЛОК **/
+	/* Тексты */
+	/* _Заголовок_ */
+	#mainTextTitle {
+		font-size: 22px;
+		line-height: initial;
+		margin-top: 110px;
+		margin-left: 5%;
+		text-align: left;
+		width: 130px;
+		height: auto;
+	}
+
+	/* _Описание_ */
+	#mainTextDescription {
+		width: 120px;
+		height: auto;
+		font-size: 18px;
+		line-height: initial;
+		margin-top: 220px;
+		margin-left: 5%;
+		text-align: left;
+	}
 }

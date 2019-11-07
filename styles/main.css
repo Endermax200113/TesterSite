@@ -170,6 +170,7 @@ html {
 	margin-top: 380px;
 	margin-left: 218px;
 	z-index: 1;
+	transition: all.2s ease-out;
 }
 
 #mainTextTitlePoint {
@@ -177,6 +178,7 @@ html {
 	letter-spacing: -1.44px;
 	float: left;
 	position: absolute;
+	transition: all.2s ease-out;
 }
 
 /* _Описание_ */
@@ -192,6 +194,7 @@ html {
 	line-height: 40.35px;
 	margin-top: 548px;
 	margin-left: 220px; 
+	transition: all.2s ease-out;
 }
 
 /* Кнопка */
