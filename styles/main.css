@@ -74,6 +74,7 @@ html {
 	float: right;
 	line-height: 85px;
 	margin-left: 30px;
+	transition: all.1s ease-out;
 }
 
 .topMenuText a {
@@ -99,7 +100,7 @@ html {
 	cursor: pointer;
 }
 
-#topMenuTextWord img {
+#topMenuTextWordArrow {
 	transform: rotate(90deg);
 	position: absolute;
 	margin-top: 3px;

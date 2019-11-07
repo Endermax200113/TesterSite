@@ -14,4 +14,22 @@
 	#topLogoTextPoint {
 		margin-left: calc(80px + 14px + 112px - 7px);
 	}
+
+	/* Верхнее меню */
+	#topMenu {
+		width: auto;
+		float: left;
+		right: 0px;
+		margin-right: calc(100px + 65px);
+	}
+	
+	.topMenuText {
+		float: left;
+	}
+
+
+	/* Верхнее социальные иконки */
+	#topSocialIcons {
+		width: calc(100% - 100px);
+	}
 }
