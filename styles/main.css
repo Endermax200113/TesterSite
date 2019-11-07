@@ -71,7 +71,6 @@ html {
 }
 
 .topMenuText {
-	float: right;
 	line-height: 85px;
 	margin-left: 30px;
 	transition: all.1s ease-out;
