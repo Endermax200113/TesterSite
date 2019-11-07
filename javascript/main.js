@@ -71,6 +71,7 @@ function spotMobVersion() {
 //Верхнее меню
 function topMenuMobMaximizeToPC() {
 	topMenuMobMaximized = false;
+	topMenuTextWord.style = "z-index: 0;"
 	topMenuTextWordArrow.style = "transform: rotate(90deg)";
 	topMenuTextOne.style = "opacity: 1; margin-top: 0px";
 	topMenuTextTwo.style = "opacity: 1; margin-top: 0px";
@@ -85,6 +86,7 @@ function topMenuMobMaximize() {
 	topMenuTextTwo.style = "opacity: 1; margin-top: calc(30px + 20px)";
 	topMenuTextThree.style = "opacity: 1; margin-top: calc(30px + 20px + 20px)";
 	topMenuTextFour.style = "opacity: 1; margin-top: calc(30px + 20px + 20px + 20px)";
+	topMenuTextWord.style = "z-index: 5;"
 	topMenuTextWordArrow.style = "transform: rotate(-90deg)";
 
 	topSocialIcons.style = "margin-top: 140px";
@@ -95,6 +97,7 @@ function topMenuMobMinimize() {
 	topMenuTextTwo.style = "opacity: 0; margin-top: 0px";
 	topMenuTextThree.style = "opacity: 0; margin-top: 0px";
 	topMenuTextFour.style = "opacity: 0; margin-top: 0px";
+	topMenuTextWord.style = "z-index: 5;"
 	topMenuTextWordArrow.style = "transform: rotate(90deg)";
 
 	topSocialIcons.style = "margin-top: 60px";

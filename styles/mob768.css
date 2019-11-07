@@ -29,6 +29,6 @@
 
 	/* Верхнее социальные иконки */
 	#topSocialIcons {
-		width: calc(100% - 100px);
+		right: 80px;
 	}
 }

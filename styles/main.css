@@ -128,13 +128,13 @@ html {
 #topSocialIcons {
 	z-index: 2;
 	text-align: right;
-	width: calc(100% - 219px);
 	float: right;
 	position: absolute;
 	margin-top: 30px;
 	text-decoration: none;
 	margin-left: 15px;
 	transition: all.2s ease-out;
+	right: 200px;
 }
 
 #topSocialIcons a {

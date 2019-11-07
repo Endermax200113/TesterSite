@@ -62,5 +62,6 @@
 		width: auto;
 		left: 50%;
 		transform: translate(-80%);
+		right: auto;
 	}
 }
