@@ -105,4 +105,46 @@
 	#mainButtonText {
 		font-size: 12px;
 	}
+	
+	/** КОНТЕНТ **/
+	#content {
+		margin-top: 10px;
+		margin-left: 0px;
+		margin-right: 0px;
+		width: 100%;
+		left: 50%;
+		transform: translate(-50%);
+	}
+	
+	/* 1 ряд */
+	.contentOneBlock {
+		width: 100%;
+		height: 100%;
+	}
+	
+	.contentOneTextTitle {
+		width: 100%;
+		text-align: center;
+		height: auto;
+	}
+	
+	.contentOneTextDescription {
+		margin-top: 10px;
+		text-align: center;
+	}
+	
+	.contentOneLink {
+		transform: translate(-50%);
+		margin-left: 50%;
+		display: inline-block;
+		line-height: initial;
+		margin-top: 0px;
+
+	}
+
+	.contentOneCenterElement {
+		top: auto;
+		left: auto;
+		transform: translate(0);
+	}
 }

@@ -18,6 +18,14 @@ var topMenuTextFour = document.querySelector("#topMenuTextFour");
 //Верхние социальные иконки
 var topSocialIcons = document.querySelector("#topSocialIcons");
 
+//КОНТЕНТ
+// _1 блок_
+var contentOneTextTitle = document.querySelectorAll(".contentOneTextTitle");
+var contentOneTextTitleWidthStd1;
+var contentOneTextTitleWidthStd2;
+var contentOneTextTitleWidthStd3;
+var contentOneResize = true;
+
 // -! Выполнение скрипта при загрузки страницы !-
 startScript();
 
@@ -46,17 +54,27 @@ window.onresize = function(e) {
 
 	if (docWidth >= 768) {
 		mobVersion = false;
+
 		topMenuMobMaximizeToPC();
+		contentSpotOneTextTitle();
 	} else {
 		mobVersion = true;
+
 		if (!topMenuMobMaximized) topMenuMobMinimize();
+		contentSpotOneTextTitle();
 	}
 }
 
 // -> Функции
 //ОСНОВА
 function startScript() {
-	if (mobVersion) topMenuMobMinimize();
+	if (mobVersion) {
+		topMenuMobMinimize();
+		topSocialIconsMoveToMob();
+		contentSpotOneTextTitle();
+	} else {
+		contentSpotOneTextTitle();
+	}
 }
 
 function spotMobVersion() {
@@ -75,7 +93,7 @@ function topMenuMobMaximizeToPC() {
 	topMenuTextThree.style = "opacity: 1; margin-top: 0px";
 	topMenuTextFour.style = "opacity: 1; margin-top: 0px";
 
-	topSocialIcons.style = "margin-top: 30px";
+	topSocialIconsMoveToPC();
 }
 
 function topMenuMobMaximize() {
@@ -97,6 +115,55 @@ function topMenuMobMinimize() {
 	topMenuTextWord.style = "z-index: 5;"
 	topMenuTextWordArrow.style = "transform: rotate(90deg)";
 
+	topSocialIconsMoveToMob();
+}
+
+//Верхние социальные иконки
+function topSocialIconsMoveToMob() {
 	topSocialIcons.style = "margin-top: 60px";
 }
 
+function topSocialIconsMoveToPC() {
+	topSocialIcons.style = "margin-top: 30px";	
+}
+
+//КОНТЕНТ
+// _1 блок_
+function contentSpotOneTextTitle() {
+	if (contentOneResize) {
+		contentOneResize = false;
+		let i = 1;
+
+		for (let el of contentOneTextTitle) {
+			if (i == 1) contentOneTextTitleWidthStd1 = window.getComputedStyle(el).getPropertyValue("width");
+			else if (i == 2) contentOneTextTitleWidthStd2 = window.getComputedStyle(el).getPropertyValue("width");
+			else if (i == 3) contentOneTextTitleWidthStd3 = window.getComputedStyle(el).getPropertyValue("width");
+
+			i++;
+		}		
+	}
+
+	let i = 1;
+	for (let el of contentOneTextTitle) {
+		if (mobVersion) {
+			let style = "";
+
+			style = "width: 100%; ";
+			if (i != 1) style += "margin-top: 150px;";
+
+			el.style = style;
+		} else {
+			let style = "";
+
+			if (i == 1) style = "width: " + contentOneTextTitleWidthStd1 + "; ";
+			else if (i == 2) style = "width: " + contentOneTextTitleWidthStd2 + "; ";
+			else if (i == 3) style = "width: " + contentOneTextTitleWidthStd3 + "; ";
+
+			if (i != 1) style += "margin-top: 0px";
+
+			el.style = style;
+		}
+
+		i++;
+	}
+}

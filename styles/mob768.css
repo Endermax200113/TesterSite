@@ -51,4 +51,17 @@
 		margin-top: 450px;
 		margin-left: 100px;
 	}
+
+	/** КОНТЕНТ **/
+	#content {
+		margin-top: 20px;
+		margin-left: 0px;
+		margin-right: 0px;
+		width: 100%;
+	}
+	
+	/* 1 ряд */
+	.contentOneBlock {
+		width: 250px;
+	}
 }
