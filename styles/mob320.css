@@ -90,4 +90,21 @@
 		left: 50%;
 		transform: translate(-50%); 
 	}
+
+	/* Кнопка */
+	#mainButton {
+		margin-top: calc(80% + 50px + 30px);
+		margin-left: 0px;
+		left: 50%;
+		transform: translate(-50%);
+	}
+	
+	#mainButtonBg {
+		width: 140px;
+		height: 30px;
+	}
+	
+	#mainButtonText {
+		font-size: 12px;
+	}
 }

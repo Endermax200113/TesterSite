@@ -204,6 +204,7 @@ html {
 	float: left;
 	position: absolute;
 	text-decoration: none;
+	transition: all.2s ease-out;
 }
 
 #mainButtonBg {
@@ -211,6 +212,7 @@ html {
 	height: 64px;
 	background-color: #fa5c65;
 	border-radius: 10px;
+	transition: all.2s ease-out;
 }
 
 #mainButtonText {
@@ -222,6 +224,7 @@ html {
 	text-transform: uppercase;
 	width: 100%;
 	text-align: center;
+	transition: all.2s ease-out;
 }
 
 /** КОНТЕНТ **/

@@ -45,4 +45,10 @@
 		margin-top: calc(250px + (48px * 3) + 10px);
 		margin-left: 100px;
 	}
+
+	/* Кнопка */
+	#mainButton {
+		margin-top: 450px;
+		margin-left: 100px;
+	}
 }

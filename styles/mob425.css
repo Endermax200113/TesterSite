@@ -71,7 +71,7 @@
 	#mainTextTitle {
 		font-size: 22px;
 		line-height: initial;
-		margin-top: 110px;
+		margin-top: 85px;
 		margin-left: 5%;
 		text-align: left;
 		width: 130px;
@@ -84,8 +84,25 @@
 		height: auto;
 		font-size: 18px;
 		line-height: initial;
-		margin-top: 220px;
+		margin-top: 190px;
 		margin-left: 5%;
 		text-align: left;
+	}
+
+	/* Кнопка */
+	#mainButton {
+		margin-top: 280px;
+		margin-left: 5%;
+		left: auto;
+		transform: initial;
+	}
+	
+	#mainButtonBg {
+		width: 140px;
+		height: 30px;
+	}
+	
+	#mainButtonText {
+		font-size: 12px;
 	}
 }
