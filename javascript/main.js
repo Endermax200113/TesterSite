@@ -149,7 +149,8 @@ function contentSpotOneTextTitle() {
 			let style = "";
 
 			style = "width: 100%; ";
-			if (i != 1) style += "margin-top: 150px;";
+			if (i == 2) style += "margin-top: 150px;";
+			if (i == 3) style += "margin-top: 200px;";
 
 			el.style = style;
 		} else {

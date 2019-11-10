@@ -245,7 +245,7 @@ html {
 	position: absolute;
 	z-index: 1;
 	float: left;
-	height: 175px;
+	height: auto;
 	width: 100%;
 }
 
@@ -316,6 +316,7 @@ html {
 	height: 410px;
 	width: 100%;
 	margin-top: calc(175px + 60px);
+	transition: all.2s ease-out;
 }
 
 /* _Картинка_ */
@@ -328,11 +329,19 @@ html {
 	background-color: #fff;
 }
 
-#contentTwoBg img {
+#contentTwoImgComp {
 	position: absolute;
 	float: left;
 	z-index: 3;
 	margin-top: 49px;
+}
+
+#contentTwoImgShadow {
+	position: absolute;
+	float: left;
+	z-index: 4;
+	margin-top: 0px;
+	height: 410px;
 }
 
 /* _Тексты_ */

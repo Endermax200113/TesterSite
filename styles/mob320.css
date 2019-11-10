@@ -149,4 +149,25 @@
 		left: auto;
 		transform: translate(0);
 	}
+	
+	/* 2 ряд */
+	#contentTwo {
+		margin-top: 500px;
+	}
+	
+	/* _Картинка_ */
+	#contentTwoBg {
+		width: 100%;
+		height: 100%;
+	}
+	
+	#contentTwoImgComp {
+		margin-top: 0px;
+		width: 100%;
+	}
+
+	#contentTwoImgShadow {
+		margin-top: 0px;
+		width: 100%;
+	}
 }

@@ -64,4 +64,14 @@
 	.contentOneBlock {
 		width: 250px;
 	}
+
+	/* 2 ряд */
+	#contentTwo {
+		margin-top: 200px;
+	}
+
+	/* _Картинка_ */
+	#contentTwoBgComp {
+		margin-top: 0px;
+	}
 }
