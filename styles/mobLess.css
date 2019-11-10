@@ -200,4 +200,60 @@
 		left: 50%;
 		transform: translate(-50%);
 	}
+
+	/* 3 ряд */
+	#contentThree {
+		width: 100%;
+		height: auto;
+		margin-top: calc(80% + 770px);
+	}
+
+	/* _Заголовок_ */
+	#contentThreeTextTitle {
+		width: 100%;
+		text-align: center;
+	}
+
+	#contentThreeTextTitlePoint {
+		position: absolute;
+		float: left;
+		z-index: 2;
+		color: #f0454c;
+		letter-spacing: -0.48px;
+	}
+
+	#contentThreeTextSubtitle {
+		width: 100%;
+		text-align: center;
+	}
+
+	/* _Работники_ */
+	#contentThreeBlocks {
+		height: auto;
+		margin-top: calc(24px + 16px + 17px + 20px);
+	}
+
+	.contentThreeBlock {
+		width: 100%;
+		height: auto;
+		left: 50%;
+		transform: translate(-50%);
+		position: relative;
+		margin-top: 10px;
+	}
+
+	#contentThreeBlockRight {
+		top: 10px;
+		float: none;
+	}
+
+	/* _Ссылка_ */
+	#contentThreeLink {
+		bottom: initial;
+		right: initial;
+		margin-right: initial;
+		margin-top: 500px;
+		left: 50%;
+		transform: translate(-50%);
+	}
 }

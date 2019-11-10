@@ -525,6 +525,10 @@ html {
 	margin-left: 15px;
 }
 
+#contentThreeBlockRight {
+	float: right;
+}
+
 /* _Ссылка_ */
 #contentThreeLink {
 	position: absolute;

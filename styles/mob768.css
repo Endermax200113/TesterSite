@@ -79,4 +79,37 @@
 	#contentTwoTextDescription {
 		width: auto;
 	}
+
+	/* _Работники_ */
+	#contentThreeBlocks {
+		position: absolute;
+		float: left;
+		z-index: 2;
+		height: 120px;
+		width: 100%;
+		margin-top: calc(24px + 16px + 17px + 40px);
+	}
+
+	.contentThreeBlock {
+		float: left;
+		z-index: 3;
+		width: 275px;
+		height: 100%;
+	}
+
+	.contentThreeBlockName {
+		margin-top: 10px;
+		margin-left: 5px;
+	}
+
+	.contentThreeBlockPost {
+		margin-top: calc(10px + 17px + 10px);
+		margin-left: 5px;
+	}
+
+	.contentThreeBlockDescription {
+		width: 120px;
+		margin-top: calc(10px + 17px + 10px + 15px + 5px);
+		margin-left: 5px;
+	}
 }
