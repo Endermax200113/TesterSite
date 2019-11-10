@@ -116,6 +116,7 @@
 		width: 100%;
 		left: 50%;
 		transform: translate(-50%);
+		min-height: 100%;
 	}
 	
 	/* 1 ряд */
@@ -206,7 +207,7 @@
 	/* 3 ряд */
 	#contentThree {
 		width: 100%;
-		height: auto;
+		height: 550px;
 		margin-top: calc(80% + 770px);
 	}
 
@@ -248,5 +249,29 @@
 		margin-top: 500px;
 		left: 50%;
 		transform: translate(-50%);
+	}
+
+	/** ФУТЕР **/
+	footer {
+		width: 100%;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	/* Социальные иконки */
+	#footerSocialIcons {
+		float: none;
+		margin-top: 10px;
+		width: auto;
+		transform: translate(-50%);
+		position: absolute;
+		left: 50%;
+	}
+
+	#footerText {
+		right: initial;
+		margin-top: 50px;
+		width: 100%;
+		text-align: center;
 	}
 }

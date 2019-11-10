@@ -558,10 +558,11 @@ footer {
 	float: left;
 	bottom: 0;
 	z-index: -1;
-	width: calc(100% - (211px * 2));
+	width: calc(100% - (100px * 2));
 	height: 90px;
-	margin-left: 211px;
-	margin-right: 211px;
+	margin-left: 100px;
+	margin-right: 100px;
+	transition: all.2s ease-out;
 }
 
 /* Разделитель */
@@ -584,7 +585,8 @@ footer {
 .footerSocialIcon {
 	z-index: 2;
 	float: left;
-	margin-right: 22px;
+	margin-right: 11px;
+	margin-left: 11px;
 }
 
 #footerText {
