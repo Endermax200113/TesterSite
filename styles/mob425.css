@@ -160,13 +160,45 @@
 	}
 
 	#contentTwoImgShadow {
-		transform: translate(-205%, -10%);
+		transform: translate(-260%, -10%);
 		left: 50%;
 	}
 	
 	#contentTwoImgComp {
 		margin-top: 0px;
 		left: 50%;
-		transform: translate(-40%);
+		transform: translate(-50%);
+	}
+
+	/* _Тексты_ */
+	#contentTwoTextTitle {
+		margin-left: 0px;
+		margin-top: 330px;
+		font-size: 30px;
+		width: 100%;
+		text-align: center;
+		height: auto;
+	}
+
+	#contentTwoTextSubtitle {
+		margin-left: 0px;
+		margin-top: calc(330px + 40px);
+		text-align: center;
+		width: 100%;
+	}
+
+	#contentTwoTextDescription {
+		margin-left: 0px;
+		margin-top: calc(330px + 40px + 30px);
+		width: 100%;
+		text-align: center;
+	}
+
+	/* _Ссылка_ */
+	#contentTwoLink {
+		margin-left: 0px;
+		margin-top: calc(330px + 40px + 30px + 130px);
+		left: 50%;
+		transform: translate(-50%);
 	}
 }

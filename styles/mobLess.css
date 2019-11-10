@@ -168,4 +168,36 @@
 		margin-top: 0px;
 		width: 100%;
 	}
+
+	/* _Тексты_ */
+	#contentTwoTextTitle {
+		margin-left: 0px;
+		margin-top: 80%;
+		font-size: 30px;
+		width: 100%;
+		text-align: center;
+		height: auto;
+	}
+
+	#contentTwoTextSubtitle {
+		margin-left: 0px;
+		margin-top: calc(80% + 40px);
+		text-align: center;
+		width: 100%;
+	}
+
+	#contentTwoTextDescription {
+		margin-left: 0px;
+		margin-top: calc(80% + 40px + 30px);
+		width: 100%;
+		text-align: center;
+	}
+
+	/* _Ссылка_ */
+	#contentTwoLink {
+		margin-left: 0px;
+		margin-top: calc(80% + 40px + 30px + 170px);
+		left: 50%;
+		transform: translate(-50%);
+	}
 }
