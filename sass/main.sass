@@ -8,20 +8,23 @@
 
 html
 	font-family: "ObelixPro", sans-serif
-	font-size: 20px
-	color: #fff
 
 .mainBlock
 	width: 100%
 	background-color: #bef
 
 .blocks
-	
+	display: flex
+	justify-content: center
+	align-items: center
+	font-size: 30px
+	color: #fff
 
 .number1
 	width: 100px
 	height: 130px
 	background-color: #4f8
+	color: black
 
 .number2
 	width: 120px
@@ -37,5 +40,21 @@ html
 	width: 130px
 	height: 100px
 	background-color: #fd0
+	color: black
+
+.buttons input[type="button"]
+	border: 0px
+	border-color: #0000
+	background-color: #ccc
+	padding: 0.7%
+	outline: none
+	font-family: "ObelixPro", sans-serif
+	font-size: 15px
+
+	&:hover
+		background-color: #ddd
+
+	&:active
+		background-color: #aaa
 
 @import media
