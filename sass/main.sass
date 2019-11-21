@@ -186,5 +186,99 @@
 	text-transform: uppercase
 	line-height: 80px
 
+// 1 КОНТЕНТ
+.content1
+	height: 800px
+	width: 100%
+	position: relative
+	display: flex
+	justify-content: space-around
+	align-items: center
+	flex-direction: column
+
+//Тексты
+.content1Text
+	font-family: "Raleway", sans-serif
+	display: flex
+	align-items: center
+	flex-direction: column
+	padding: 0px 60px
+
+.content1TextTitle
+	color: #061e37
+	font-weight: 600
+	font-size: 45px
+
+.content1TextSubtitle
+	color: #b0bec5
+	font-size: 25px
+	font-weight: 600
+	line-height: 45px
+
+.content1TextDesciption
+	color: #b0bec5
+	font-size: 15px
+	font-weight: normal
+	width: 600px
+	text-align: center
+
+// Блоки
+.content1Blocks
+	width: calc(100% - 120px)
+	display: flex
+	padding: 0px 60px
+	flex-direction: row
+	justify-content: space-between
+
+.content1Block
+	display: flex
+	flex-direction: column
+	justify-content: space-around
+	align-items: center
+	height: 210px
+	width: 350px
+	text-align: center
+
+.content1BlockImage
+	height: 60px
+	padding-bottom: 40px
+
+.content1BlockImage img
+	height: 100%
+	
+.content1BlockTitle
+	font-family: "Raleway", sans-serif
+	font-weight: 600
+	font-size: 20px
+	color: #061e37
+
+.content1BlockDescription
+	font-family: "Raleway", sans-serif
+	font-size: 15px
+	font-weight: 400
+	color: #78909c
+
+.content1Button
+	border-radius: 5px
+	background-color: #1de9b6
+	box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15)
+	width: 150px
+	height: 55px
+	display: flex
+	justify-content: center
+	align-items: center
+	font-family: "Raleway", sans-serif
+	font-weight: bold
+	font-size: 15px
+	text-transform: uppercase
+	color: #fff
+	transition: all .3s ease
+	cursor: pointer
+	
+	&:hover
+		background-color: #1bc69b
+
+	&:active
+		background-color: #169676
 
 @import media
