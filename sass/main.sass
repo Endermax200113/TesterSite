@@ -6,6 +6,41 @@
 	margin: 0px
 	padding: 0px
 
+/* ШАПКА */
+/* Задний фон */
+.headerBg
+	position: relative
+
+.headerBg .headerBgMain
+	width: 100%
+	z-index: 0
+	position: absolute
+
+.headerBg .headerBgGradient
+	width: 100%
+	z-index: 1
+	opacity: 0.9
+	position: absolute
+
+.headerMenu
+	z-index: 2
+	position: relative
+	display: flex
+	justify-content: space-around
+	align-items: flex-end
+	height: 50px
+
+.headerMenuButton
+	font-size: 15px
+	font-family: "Raleway", sans-serif
+	color: #fff
+	font-weight: bold
+	text-decoration: none
+	transition: all.3s ease
+
+	&:hover
+		color: #061e37
+
 
 
 @import media
