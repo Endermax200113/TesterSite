@@ -1,3 +1,3 @@
 //ОСНОВА
-var numberTest = 6;
+var numberTest = 7;
 var test = "[Тест №" + numberTest + "] Это тестовый сайт!";
