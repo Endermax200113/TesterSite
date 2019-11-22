@@ -6,8 +6,8 @@
 	margin: 0px
 	padding: 0px
 
-// ШАПКА
-// Задний фон
+//ШАПКА
+//Задний фон
 .headerBg
 	position: relative
 
@@ -22,7 +22,7 @@
 	opacity: 0.9
 	position: absolute
 
-// Меню
+//Меню
 .headerMenuAll
 	z-index: 2
 	position: relative
@@ -59,7 +59,7 @@
 	display: flex
 	justify-content: space-around
 
-// Основа
+//Основа
 .headerBasic
 	z-index: 2
 	display: flex
@@ -72,7 +72,7 @@
 	height: 320px
 	justify-content: space-between
 
-// _Тексты_
+//_Тексты_
 .headerBasicText
 	width: 530px
 
@@ -124,7 +124,7 @@
 		background-color: #999
 		color: #fff
 
-// _Видео_
+//_Видео_
 .headerBasicVideo
 	position: relative
 	display: flex
@@ -186,7 +186,7 @@
 	text-transform: uppercase
 	line-height: 80px
 
-// 1 КОНТЕНТ
+//1 КОНТЕНТ
 .content1
 	height: 800px
 	width: 100%
@@ -222,7 +222,7 @@
 	width: 600px
 	text-align: center
 
-// Блоки
+//Блоки
 .content1Blocks
 	width: calc(100% - 120px)
 	display: flex
@@ -280,5 +280,75 @@
 
 	&:active
 		background-color: #169676
+
+//ИНФОРМАЦИЯ
+.info
+	height: 150px
+	position: relative
+	display: flex
+	justify-content: space-between
+
+.infoBlock
+	height: 100%
+	width: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	z-index: 1
+
+	&1
+		@extend .infoBlock
+		background-color: #80d8ff
+
+	&2
+		@extend .infoBlock
+		background-color: #82b1ff
+
+	&3
+		@extend .infoBlock
+		background-color: #b388ff
+	
+	&4
+		@extend .infoBlock
+		background-color: #ea80fc
+
+//Изображение
+.infoBlockImage
+	border-radius: 50%
+	background-color: #fff
+	width: 60px
+	height: 60px
+	z-index: 2
+	font-size: 30px
+	font-family: "Material Icons", sans-serif
+	display: flex
+	justify-content: center
+	align-items: center
+
+	&1
+		@extend .infoBlockImage
+		color: #80d8ff
+
+	&2
+		@extend .infoBlockImage
+		color: #82b1ff
+
+	&3
+		@extend .infoBlockImage
+		color: #b388ff
+
+	&4
+		@extend .infoBlockImage
+		color: #ea80fc
+
+//Текст
+.infoBlockText
+	padding-left: 25px
+	font-family: "Raleway", sans-serif
+	font-weight: 800
+	font-size: 20px
+	color: #fff
+
+
 
 @import media
