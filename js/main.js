@@ -1,35 +1,25 @@
 // -> Переменные
 //ОСНОВА
-var numberTest = 12;
+var numberTest = 13;
 var test = "[Тест №" + numberTest + "] Это тестовый сайт!";
 
 //ШАПКА
 //Основы размеров
-var headerBgMainHeight = window.getComputedStyle(document.querySelector(".headerBgMain")).getPropertyValue("height");
-var headerMenuAllHeight = window.getComputedStyle(document.querySelector(".headerMenuAll")).getPropertyValue("height");
-var headerBasicHeight = window.getComputedStyle(document.querySelector(".headerBasic")).getPropertyValue("height");
+var headerBgMainHeight = window.getComputedStyle(fromElement(".headerBgMain")).getPropertyValue("height");
+var headerMenuAllHeight = window.getComputedStyle(fromElement(".headerMenuAll")).getPropertyValue("height");
+var headerBasicHeight = window.getComputedStyle(fromElement(".headerBasic")).getPropertyValue("height");
 
 //Специальная пустота
-var headerEmpty = document.querySelector("#headerEmpty");
+var headerEmpty = fromElement("#headerEmpty");
 
 //ВТОРОЙ КОНТЕНТ
-var content2BlockMinimized = document.querySelectorAll(".content2BlockMinimized");
-var content2BlockMaximized = document.querySelectorAll(".content2BlockMaximized");
-var content2Block1 = document.querySelector("#content2Block1");
-var content2Block2 = document.querySelector("#content2Block2");
-var content2Block3 = document.querySelector("#content2Block3");
-var content2Block4 = document.querySelector("#content2Block4");
-var content2Block5 = document.querySelector("#content2Block5");
-
-//Размеры для блоков
-var styleForMinimized = "overflow: hidden; " +
-						"opacity: 0; " +
-						"padding: 0px; " +
-						"height: 0px; "
-var styleForMaximized = "overflow: unset; " +
-						"opacity: 1; " +
-						"padding-bottom: 25px; " +
-						"height: auto; "
+var content2BlockMinimized = fromElement(".content2BlockMinimized");
+var content2BlockMaximized = fromElement(".content2BlockMaximized");
+var content2Block1 = fromElement("#content2Block1");
+var content2Block2 = fromElement("#content2Block2");
+var content2Block3 = fromElement("#content2Block3");
+var content2Block4 = fromElement("#content2Block4");
+var content2Block5 = fromElement("#content2Block5");
 
 // -! Выполнение скрипта при загрузки страницы !-
 startScript();
@@ -37,9 +27,9 @@ startScript();
 // -> Слушатели
 // -! Во время изменения окна !-
 window.onresize = function(e) {
-	headerBgMainHeight = window.getComputedStyle(document.querySelector(".headerBgMain")).getPropertyValue("height");
-	headerMenuAllHeight = window.getComputedStyle(document.querySelector(".headerMenuAll")).getPropertyValue("height");
-	headerBasicHeight = window.getComputedStyle(document.querySelector(".headerBasic")).getPropertyValue("height");
+	headerBgMainHeight = window.getComputedStyle(fromElement(".headerBgMain")).getPropertyValue("height");
+	headerMenuAllHeight = window.getComputedStyle(fromElement(".headerMenuAll")).getPropertyValue("height");
+	headerBasicHeight = window.getComputedStyle(fromElement(".headerBasic")).getPropertyValue("height");
 
 	headerEmpty.style = "height: calc(" + 
 						headerBgMainHeight + " - " + 
@@ -51,26 +41,28 @@ window.onresize = function(e) {
 document.addEventListener("click", function(e) {
 	let element = e.target;
 
-	if (element == content2Block1 || 
-		element == content2Block2 || 
-		element == content2Block3 || 
-		element == content2Block4 || 
-		element == content2Block5) {
-		if (element.className.endsWith("Maximized")) {
-			element.classList.remove("content2BlockMaximized");
-			element.classList.add("content2BlockMinimized");
-		} else if (element.className.endsWith("Minimized")) {
+	if (isContent2BlockFrom(element, content2Block1) || 
+		isContent2BlockFrom(element, content2Block2) || 
+		isContent2BlockFrom(element, content2Block3) || 
+		isContent2BlockFrom(element, content2Block4) || 
+		isContent2BlockFrom(element, content2Block5)) {
+		let block = getContent2Block(element);
+
+		if (block.className.endsWith("Maximized")) {
+			block.classList.remove("content2BlockMaximized");
+			block.classList.add("content2BlockMinimized");
+		} else if (block.className.endsWith("Minimized")) {
 			for (let el of content2BlockMaximized) {
 				el.classList.remove("content2BlockMaximized");
 				el.classList.add("content2BlockMinimized");
 			}
 
-			element.classList.remove("content2BlockMinimized");
-			element.classList.add("content2BlockMaximized");
+			block.classList.remove("content2BlockMinimized");
+			block.classList.add("content2BlockMaximized");
 		}
 
-		content2BlockMinimized = document.querySelectorAll(".content2BlockMinimized");
-		content2BlockMaximized = document.querySelectorAll(".content2BlockMaximized");
+		content2BlockMinimized = fromClasses(".content2BlockMinimized");
+		content2BlockMaximized = fromClasses(".content2BlockMaximized");
 	}
 });
 
@@ -83,3 +75,51 @@ function startScript() {
 						headerBasicHeight + " - 75px);";
 }
 
+function fromElement(el) {
+	return document.querySelector(el);
+}
+
+function fromClasses(el) {
+	return document.querySelectorAll(el);
+}
+
+//ВТОРОЙ КОНТЕНТ
+function isContent2BlockFrom(mainEl, forEl) {
+	let basic = forEl.querySelector(".content2BlockBasic");
+	let basicLeft = forEl.querySelector(".content2BlockBasic").
+					querySelector(".content2BlockBasicLeft");
+	let basicLeftIcon = forEl.querySelector(".content2BlockBasic").
+						querySelector(".content2BlockBasicLeft").
+						querySelector(".content2BlockBasicLeftIcon");
+	let basicLeftTitle = forEl.querySelector(".content2BlockBasic").
+						 querySelector(".content2BlockBasicLeft").
+						 querySelector(".content2BlockBasicLeftTitle");
+	let basicRight = forEl.querySelector(".content2BlockBasic").
+					 querySelector(".content2BlockBasicRightArrow");
+	let details = forEl.querySelector(".content2BlockDetails");
+	let detailsImage = forEl.querySelector(".content2BlockDetails").
+					   querySelector(".content2BlockDetailsImage");
+	let detailsDescription = forEl.querySelector(".content2BlockDetails").
+							 querySelector(".content2BlockDetailsDescription");
+	let self = forEl;
+
+	if (mainEl == basic) return true;
+	else if (mainEl == basicLeft) return true;
+	else if (mainEl == basicLeftIcon) return true;
+	else if (mainEl == basicLeftTitle) return true;
+	else if (mainEl == basicRight) return true;
+	else if (mainEl == details) return true;
+	else if (mainEl == detailsImage) return true;
+	else if (mainEl == detailsDescription) return true;
+	else if (mainEl == forEl) return true;
+	else return false;
+}
+
+function getContent2Block(mainEl) {
+	if (isContent2BlockFrom(mainEl, content2Block1)) return content2Block1; 
+	else if (isContent2BlockFrom(mainEl, content2Block2)) return content2Block2; 
+	else if (isContent2BlockFrom(mainEl, content2Block3)) return content2Block3; 
+	else if (isContent2BlockFrom(mainEl, content2Block4)) return content2Block4; 
+	else if (isContent2BlockFrom(mainEl, content2Block5)) return content2Block5; 
+	else return null;
+}
