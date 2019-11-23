@@ -1,6 +1,6 @@
 // -> Переменные
 //ОСНОВА
-var numberTest = 13;
+var numberTest = 14;
 var test = "[Тест №" + numberTest + "] Это тестовый сайт!";
 
 //ШАПКА
@@ -13,8 +13,8 @@ var headerBasicHeight = window.getComputedStyle(fromElement(".headerBasic")).get
 var headerEmpty = fromElement("#headerEmpty");
 
 //ВТОРОЙ КОНТЕНТ
-var content2BlockMinimized = fromElement(".content2BlockMinimized");
-var content2BlockMaximized = fromElement(".content2BlockMaximized");
+var content2BlockMinimized = fromClasses(".content2BlockMinimized");
+var content2BlockMaximized = fromClasses(".content2BlockMaximized");
 var content2Block1 = fromElement("#content2Block1");
 var content2Block2 = fromElement("#content2Block2");
 var content2Block3 = fromElement("#content2Block3");
