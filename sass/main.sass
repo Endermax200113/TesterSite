@@ -393,37 +393,55 @@
 	&Block
 		display: flex
 		flex-direction: column
-		justify-content: space-between
-		align-items: center
+		justify-content: space-around
 		border-radius: 5px
 		background-color: #fff
 		width: 750px
 		z-index: 1
 		margin: 10px 0px
+		cursor: pointer
+		transition: all .3s ease
+		padding: 0px 25px
 		
 		&Maximized
 			@extend .content2Block
 			box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1)
 			height: 240px
-			padding: 0px 25px
 		
+		&Maximized .content2BlockDetails
+			opacity: 1
+			padding-bottom: 25px
+			height: auto
+		
+		&Maximized .content2BlockBasic
+			height: 60px
+
 		&Minimized
 			@extend .content2Block
 			box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.13)
 			height: 50px
-			padding: 0px 25px
 
+		&Minimized .content2BlockDetails
+			opacity: 0
+			padding: 0px
+			height: 0px
+
+		&Minimized .content2BlockBasic
+			height: 50px
+		
 		&Basic
 			display: flex
 			flex-direction: row
 			justify-content: space-between
 			align-items: center
-			height: 100%
-			width: 100%
+			width: auto
+			z-index: 2
+			transition: all .3s ease
 			
 			&Left
 				@extend .content2BlockBasic
 				justify-content: flex-start
+				transition: all .3s ease
 
 				&Icon
 					font-size: 20px
@@ -432,6 +450,7 @@
 					font-weight: normal
 					color: #061e37
 					padding-right: 25px
+					transition: all .3s ease
 
 				&Title
 					font-size: 15px
@@ -439,6 +458,7 @@
 					font-weight: bold
 					color: #061e37
 					text-transform: uppercase 
+					transition: all .3s ease
 
 			&RightArrow
 				@extend .content2BlockBasic
@@ -454,17 +474,30 @@
 			flex-direction: row
 			justify-content: space-between
 			align-items: center
-			height: auto
-			width: 100%
-			padding-bottom: 25px 
+			height: 180px
+			width: auto
+			padding-bottom: 25px
+			transition: all .3s ease
+			z-index: 2
+			overflow: hidden
 
 			&Image
 				height: 155px
 				width: 250px
+				padding-right: 25px 
+				transition: all .3s ease
 			
 			&Description
-				
+				font-family: "Raleway", sans-serif
+				font-size: 15px
+				line-height: 25px
+				font-weight: normal
+				color: #061e37
+				width: 100%
+				transition: all .3s ease
 
-		
+#content2Block
+	&1, &2, &3, &4, &5
+		z-index: 200
 
 @import media
