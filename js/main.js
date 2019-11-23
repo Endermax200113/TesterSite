@@ -1,6 +1,6 @@
 // -> Переменные
 //ОСНОВА
-var numberTest = 14;
+var numberTest = 15;
 var test = "[Тест №" + numberTest + "] Это тестовый сайт!";
 
 //ШАПКА
@@ -51,6 +51,7 @@ document.addEventListener("click", function(e) {
 		if (block.className.endsWith("Maximized")) {
 			block.classList.remove("content2BlockMaximized");
 			block.classList.add("content2BlockMinimized");
+			fromElement(".content2").style = "height: 680px";
 		} else if (block.className.endsWith("Minimized")) {
 			for (let el of content2BlockMaximized) {
 				el.classList.remove("content2BlockMaximized");
@@ -59,6 +60,7 @@ document.addEventListener("click", function(e) {
 
 			block.classList.remove("content2BlockMinimized");
 			block.classList.add("content2BlockMaximized");
+			fromElement(".content2").style = "height: 870px";
 		}
 
 		content2BlockMinimized = fromClasses(".content2BlockMinimized");

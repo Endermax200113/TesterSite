@@ -358,6 +358,7 @@
 	flex-direction: column
 	justify-content: center
 	align-items: center
+	transition: all .3s ease
 	
 	//Текст
 	&Text
@@ -412,9 +413,9 @@
 			opacity: 1
 			padding-bottom: 25px
 			height: auto
-		
-		&Maximized .content2BlockBasic
-			height: 60px
+
+		&Maximized .content2BlockBasicRightArrow
+			transform: rotate(-180deg)
 
 		&Minimized
 			@extend .content2Block
@@ -425,16 +426,17 @@
 			opacity: 0
 			padding: 0px
 			height: 0px
-
-		&Minimized .content2BlockBasic
-			height: 50px
 		
+		&Minimized .content2BlockBasicRightArrow
+			transform: rotate(0deg)
+
 		&Basic
 			display: flex
 			flex-direction: row
 			justify-content: space-between
 			align-items: center
 			width: auto
+			height: 50px
 			z-index: 2
 			transition: all .3s ease
 			
@@ -495,9 +497,5 @@
 				color: #061e37
 				width: 100%
 				transition: all .3s ease
-
-#content2Block
-	&1, &2, &3, &4, &5
-		z-index: 3
 
 @import media
