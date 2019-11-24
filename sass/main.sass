@@ -408,12 +408,6 @@
 			@extend .content2Block
 			box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1)
 			height: 240px
-		
-
-		// &Maximized .content2BlockDetails
-		// 	opacity: 1
-		// 	padding-bottom: 25px
-		// 	height: auto
 
 		&Maximized .content2BlockBasicRightArrow
 			transform: rotate(-180deg)
@@ -422,11 +416,6 @@
 			@extend .content2Block
 			box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.13)
 			height: 50px
-
-		// &Minimized .content2BlockDetails
-		// 	opacity: 0
-		// 	padding: 0px
-		// 	height: 0px
 		
 		&Minimized .content2BlockBasicRightArrow
 			transform: rotate(0deg)
@@ -480,7 +469,7 @@
 			align-items: center
 			height: 180px
 			width: auto
-			transition: all 3s ease
+			transition: all .3s ease
 			z-index: 2
 			overflow: hidden
 
@@ -498,5 +487,130 @@
 				color: #061e37
 				width: 100%
 				transition: all .3s ease
+
+//ЛИСТ
+.list
+	position: relative
+	width: 100%
+
+	&Bg
+		position: absolute
+		width: 100%
+		z-index: 1
+
+	&Gradient
+		position: absolute
+		opacity: 0.95
+		width: 100%
+		z-index: 2
+
+	&Main
+		position: relative
+		width: calc(100% - 160px)
+		height: 100%
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+		padding: 0px 80px
+		z-index: 3
+
+		&Text
+			width: 100%
+			max-width: 515px
+			height: 280px
+			z-index: 4
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			
+			&Basic
+				font-family: "Raleway", sans-serif
+				font-weight: 600
+
+				&Title
+					@extend .listMainTextBasic
+					font-size: 45px
+					color: #fff
+
+				&Description
+					@extend .listMainTextBasic
+					font-size: 15px
+					line-height: 25px
+					color: #fff
+
+			&Button
+				width: 150px
+				height: 55px
+				border-radius: 5px
+				background-color: #061e37
+				display: flex
+				justify-content: center
+				align-items: center
+				text-transform: uppercase
+				color: #fff
+				font-family: "Raleway", sans-serif
+				font-weight: bold
+				cursor: pointer
+				transition: all .3s ease
+
+				&:hover
+					background-color: #0d355f
+
+				&:active
+					background-color: #06182c
+
+		&Workers
+			height: 390px
+			width: 660px
+			z-index: 4
+			
+			&Blocks
+				display: flex
+				flex-direction: column
+				justify-content: space-around
+				align-items: center
+				height: 100%
+				width: 100%
+
+			&Block
+				display: flex
+				flex-direction: row
+				justify-content: space-between
+				align-items: center
+				width: 100%
+
+				&Image
+					box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15)
+					border-radius: 50%
+				
+				&Panel
+					display: flex
+					flex-direction: column
+					justify-content: space-between
+					align-items: flex-start
+					width: 490px
+					height: 100px
+					padding: 30px
+					border-radius: 5px
+					background-color: #fff
+					box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15)
+					
+					&Title
+						font-family: "Raleway", sans-serif
+						font-weight: bold
+						font-size: 18px
+						color: #061e37
+						
+					&Description
+						font-family: "Raleway", sans-serif
+						font-style: italic
+						line-height: 25px
+						font-size: 15px
+						color: #78909c
+						
+						
+
+
 
 @import media

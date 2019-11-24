@@ -1,13 +1,13 @@
 // -> Переменные
 //ОСНОВА
-var numberTest = 16;
+var numberTest = 17;
 var test = "[Тест №" + numberTest + "] Это тестовый сайт!";
 
 //ШАПКА
 //Основы размеров
-var headerBgMainHeight = window.getComputedStyle(fromElement(".headerBgMain")).getPropertyValue("height");
-var headerMenuAllHeight = window.getComputedStyle(fromElement(".headerMenuAll")).getPropertyValue("height");
-var headerBasicHeight = window.getComputedStyle(fromElement(".headerBasic")).getPropertyValue("height");
+var headerBgMainHeight = getValueStyle(".headerBgMain", "height");
+var headerMenuAllHeight = getValueStyle(".headerMenuAll", "height");
+var headerBasicHeight = getValueStyle(".headerBasic", "height");
 
 //Специальная пустота
 var headerEmpty = fromElement("#headerEmpty");
@@ -21,20 +21,27 @@ var content2Block3 = fromElement("#content2Block3");
 var content2Block4 = fromElement("#content2Block4");
 var content2Block5 = fromElement("#content2Block5");
 
+//ЛИСТ
+var listBgHeight = getValueStyle(".listBg", "height");
+var list = fromElement(".list");
+
 // -! Выполнение скрипта при загрузки страницы !-
 startScript();
 
 // -> Слушатели
 // -! Во время изменения окна !-
 window.onresize = function(e) {
-	headerBgMainHeight = window.getComputedStyle(fromElement(".headerBgMain")).getPropertyValue("height");
-	headerMenuAllHeight = window.getComputedStyle(fromElement(".headerMenuAll")).getPropertyValue("height");
-	headerBasicHeight = window.getComputedStyle(fromElement(".headerBasic")).getPropertyValue("height");
+	headerBgMainHeight = getValueStyle(".headerBgMain", "height");
+	headerMenuAllHeight = getValueStyle(".headerMenuAll", "height");
+	headerBasicHeight = getValueStyle(".headerBasic", "height");
 
 	headerEmpty.style = "height: calc(" + 
 						headerBgMainHeight + " - " + 
 						headerMenuAllHeight + " - " + 
 						headerBasicHeight + " - 75px);";
+
+	listBgHeight = getValueStyle(".listBg", "height");
+	list.style = "height: " + listBgHeight;
 }
 
 // -! Во время клика элемента !-
@@ -75,6 +82,8 @@ function startScript() {
 						headerBgMainHeight + " - " + 
 						headerMenuAllHeight + " - " + 
 						headerBasicHeight + " - 75px);";
+
+	list.style = "height: " + listBgHeight;
 }
 
 function fromElement(el) {
@@ -83,6 +92,10 @@ function fromElement(el) {
 
 function fromClasses(el) {
 	return document.querySelectorAll(el);
+}
+
+function getValueStyle(el, type) {
+	return window.getComputedStyle(fromElement(el)).getPropertyValue(type);
 }
 
 //ВТОРОЙ КОНТЕНТ
