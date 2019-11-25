@@ -700,5 +700,86 @@
 			align-items: center
 			width: 200px
 
+//КОНТАКТЫ
+.contacts
+	width: 100%
+	height: 660px
+	background-color: #fafafa
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+
+	&Text
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+		height: 110px
+
+		&Title
+			font-family: "Raleway", sans-serif
+			font-weight: 600
+			font-size: 45px
+			color: #061e37
+
+		&Description
+			font-family: "Raleway", sans-serif
+			font-weight: normal
+			font-size: 15px
+			line-height: 25px
+			text-align: center
+			color: #061e37
+			width: 565px
+
+	&Form
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+		height: 360px
+		width: 600px
+		
+		&Data
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			align-items: space-between
+			width: 100%
+			height: 120px
+
+			&Up, &Down
+				display: flex
+				flex-direction: row
+				justify-content: space-between
+				align-items: center
+
+			&Field[type="text"], &Field[type="email"], &Field[type="tel"]
+				width: 260px
+				height: 50px
+				border-radius: 5px
+				border: 1px solid #061e37
+				background-color: #fafafa
+				padding-left: 20px
+				outline: none
+				transition: all .3s ease
+
+				&::placeholder
+					font-family: "Raleway", sans-serif
+					font-size: 14px
+					font-weight: 500
+					line-height: 30px
+					color: #061e37
+					transition: all .3s ease
+
+				&:hover
+					border-color: #14508f
+
+				&:focus
+					border-color: #1c78d7
+
+				&:focus::placeholder
+					color: #14508f
+
 
 @import media

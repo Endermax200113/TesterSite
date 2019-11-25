@@ -1,6 +1,6 @@
 // -> Переменные
 //ОСНОВА
-var numberTest = 18;
+var numberTest = 19;
 var test = "[Тест №" + numberTest + "] Это тестовый сайт!";
 
 //ШАПКА
