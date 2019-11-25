@@ -1,6 +1,6 @@
 // -> Переменные
 //ОСНОВА
-var numberTest = 23;
+var numberTest = 24;
 var test = "[Тест №" + numberTest + "] Это тестовый сайт!";
 var update;
 
@@ -32,7 +32,7 @@ var contactsFormLastCheckLabel = fromElement(".contactsFormLastCheckLabel");
 var contactsFormLastCheckMark = false;
 
 // -! Выполнение скрипта при загрузки страницы !-
-startScript();
+setTimeout(startScript(), 5000);
 
 // -> Слушатели
 // -! Во время изменения окна !-
@@ -97,7 +97,7 @@ function startScript() {
 						headerMenuAllHeight + " - " + 
 						headerBasicHeight + " - 75px);";
 
-	for (update = 0; update < 5; update++) {
+	for (update = 0; update < 100; update++) {
 		listBgHeight = getValueStyle(".listBg", "height");
 		list.style = "height: " + listBgHeight;
 	}
