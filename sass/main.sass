@@ -710,7 +710,8 @@
 	flex-direction: column
 	justify-content: center
 	align-items: center
-
+	
+	//Тексты
 	&Text
 		display: flex
 		flex-direction: column
@@ -732,7 +733,8 @@
 			text-align: center
 			color: #061e37
 			width: 565px
-
+	
+	//Форма
 	&Form
 		display: flex
 		flex-direction: column
@@ -889,6 +891,90 @@
 				&:active
 					background-color: #169676
 
+footer
+	width: calc(100% - 160px)
+	height: 300px
+	position: relative
+	padding: 0px 80px
+	background-color: #061e37
+	display: flex
+	flex-direction: column
+	justify-content: center
+
+.footer
+	&Menu
+		width: 100%
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+		padding-bottom: 25px
+
+		&Left
+			display: flex
+			flex-direction: row
+			justify-content: flex-start
+			align-items: center
+
+			&Image
+				width: 40px
+				padding-right: 10px
+
+			&Text
+				font-family: "Raleway", sans-serif
+				font-size: 15px
+				color: #fff
+				text-transform: uppercase
+		
+		&Right
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			align-items: center
+			width: 440px
+
+			&Button
+				font-family: "Raleway", sans-serif
+				font-weight: 600
+				font-size: 15px
+				line-height: 25px
+				color: #fff
+
+	&Bottom
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+		padding-top: 25px
+
+		&Left
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			align-items: center
+			width: 310px
+
+			&Text
+				font-family: "Raleway", sans-serif
+				font-weight: normal
+				font-size: 15px
+				line-height: 25px
+				color: #fff
+				opacity: 0.5
+
+			&Separator
+				height: 5px
+				width: 5px
+				background-color: #fff
+				border-radius: 50%
+
+		&Right
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			align-items: center
+			width: 170px
+			opacity: 0.2
 
 
 @import media
