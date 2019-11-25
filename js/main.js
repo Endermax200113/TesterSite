@@ -1,6 +1,6 @@
 // -> Переменные
 //ОСНОВА
-var numberTest = 26;
+var numberTest = 27;
 var test = "[Тест №" + numberTest + "] Это тестовый сайт!";
 var update;
 
@@ -32,7 +32,7 @@ var contactsFormLastCheckLabel = fromElement(".contactsFormLastCheckLabel");
 var contactsFormLastCheckMark = false;
 
 // -! Выполнение скрипта при загрузки страницы !-
-setTimeout(() => startScript(), 5000);
+setTimeout(() => startScript(), 1000);
 
 // -> Слушатели
 // -! Во время изменения окна !-
