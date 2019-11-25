@@ -32,7 +32,7 @@ var contactsFormLastCheckLabel = fromElement(".contactsFormLastCheckLabel");
 var contactsFormLastCheckMark = false;
 
 // -! Выполнение скрипта при загрузки страницы !-
-setTimeout(() => startScript(), 1000);
+setTimeout(() => startScript(), 2500);
 
 // -> Слушатели
 // -! Во время изменения окна !-
