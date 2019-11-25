@@ -1,7 +1,8 @@
 // -> Переменные
 //ОСНОВА
-var numberTest = 22;
+var numberTest = 23;
 var test = "[Тест №" + numberTest + "] Это тестовый сайт!";
+var update;
 
 //ШАПКА
 //Основы размеров
@@ -96,7 +97,10 @@ function startScript() {
 						headerMenuAllHeight + " - " + 
 						headerBasicHeight + " - 75px);";
 
-	list.style = "height: " + listBgHeight;
+	for (update = 0; update < 5; update++) {
+		listBgHeight = getValueStyle(".listBg", "height");
+		list.style = "height: " + listBgHeight;
+	}
 }
 
 function fromElement(el) {
