@@ -1,6 +1,6 @@
 // -> Переменные
 //ОСНОВА
-var numberTest = 20;
+var numberTest = 21;
 var test = "[Тест №" + numberTest + "] Это тестовый сайт!";
 
 //ШАПКА
@@ -24,6 +24,11 @@ var content2Block5 = fromElement("#content2Block5");
 //ЛИСТ
 var listBgHeight = getValueStyle(".listBg", "height");
 var list = fromElement(".list");
+
+//КОНТАКТЫ
+var contactsFormLastCheckBox = fromElement(".contactsFormLastCheckBox");
+var contactsFormLastCheckLabel = fromElement(".contactsFormLastCheckLabel");
+var contactsFormLastCheckMark = false;
 
 // -! Выполнение скрипта при загрузки страницы !-
 startScript();
@@ -72,6 +77,14 @@ document.addEventListener("click", function(e) {
 
 		content2BlockMinimized = fromClasses(".content2BlockMinimized");
 		content2BlockMaximized = fromClasses(".content2BlockMaximized");
+	} else if (element == contactsFormLastCheckBox || element == contactsFormLastCheckLabel) {
+		if (!contactsFormLastCheckMark) {
+			contactsFormLastCheckBox.innerText = "check_box";
+			contactsFormLastCheckMark = true;
+		} else {
+			contactsFormLastCheckBox.innerText = "check_box_outline_blank";
+			contactsFormLastCheckMark = false;
+		}
 	}
 });
 
@@ -137,4 +150,9 @@ function getContent2Block(mainEl) {
 	else if (isContent2BlockFrom(mainEl, content2Block4)) return content2Block4; 
 	else if (isContent2BlockFrom(mainEl, content2Block5)) return content2Block5; 
 	else return null;
+}
+
+//КОНТАКТЫ
+function test() {
+	alert("Сработало!");
 }

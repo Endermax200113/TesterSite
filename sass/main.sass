@@ -702,6 +702,7 @@
 
 //КОНТАКТЫ
 .contacts
+	position: relative
 	width: 100%
 	height: 660px
 	background-color: #fafafa
@@ -739,6 +740,7 @@
 		align-items: center
 		height: 360px
 		width: 600px
+		padding-top: 50px
 		
 		&Data
 			display: flex
@@ -783,9 +785,110 @@
 
 				&:focus
 					border-color: #1c78d7
+					background-color: #fff
 
 				&:focus::placeholder
 					color: #14508f
+
+		&Message
+			width: 100%
+			height: 190px
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			align-items: center
+
+			&Textarea
+				width: 100%
+				height: 130px
+				resize: none
+				border-radius: 5px
+				outline: none
+				border: 1px solid #061e37
+				padding: 10px 20px
+				background-color: #fafafa
+				transition: all .3s ease
+				font-family: "Raleway", sans-serif
+				font-weight: 500
+				font-size: 14px
+				line-height: 30px
+				color: #000
+
+				&::placeholder
+					font-family: "Raleway", sans-serif
+					font-size: 14px
+					font-weight: 500
+					color: #061e37
+					transition: all .3s ease
+
+				&:hover
+					border-color: #14508f
+
+				&:focus
+					border-color: #1c78d7
+					background-color: #fff
+
+				&:focus::placeholder
+					color: #14508f
+
+		&Last
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			align-items: center
+			width: 100%
+
+			&Check
+				display: flex
+				flex-direction: row
+				justify-content: flex-start
+				align-items: center
+				cursor: pointer
+
+				&Box
+					font-family: "Material Icons", sans-serif
+					font-size: 20px
+					font-weight: normal
+					color: #061e37
+					text-align: center
+					transition: all .3s ease
+
+				&Label
+					font-family: "Raleway", sans-serif
+					font-size: 15px
+					font-weight: 500
+					color: #061e37
+					padding-left: 10px
+					transition: all .3s ease
+
+				&:hover > &Box, &Label
+					color: #0d355f
+
+				&:active > &Box, &Label
+					color: #06182c
+
+			&Button[type="submit"]
+				width: 130px
+				height: 50px
+				border-radius: 5px
+				background-color: #1de9b6
+				border: 0px
+				font-family: "Raleway", sans-serif
+				font-weight: 500
+				font-size: 16px
+				line-height: 30px
+				color: #fff
+				text-transform: uppercase
+				cursor: pointer
+				transition: all .3s ease
+				outline: none
+
+				&:hover
+					background-color: #1bc69b
+
+				&:active
+					background-color: #169676
+
 
 
 @import media
