@@ -8,35 +8,42 @@
 
 //ШАПКА
 //Задний фон
+header
+	position: relative
+
 .headerBg
 	position: relative
 
-.headerBg .headerBgMain
-	width: 100%
-	z-index: 0
-	position: absolute
+	&Main
+		width: 100%
+		z-index: 0
+		position: absolute
 
-.headerBg .headerBgGradient
-	width: 100%
-	z-index: 1
-	opacity: 0.9
-	position: absolute
+	&Gradient
+		width: 100%
+		z-index: 1
+		opacity: 0.9
+		position: absolute
 
 //Меню
 .headerMenu
-	width: 40%
-	margin: 0 auto
+	width: 440px
 	display: flex
-	justify-content: space-around
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+	position: absolute
 
 	&All
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: flex-start
 		z-index: 2
 		position: relative
-		display: flex
-		justify-content: space-between
-		align-items: center
 		height: 100px
-		width: 100%
+		width: calc(100% - 160px)
+		padding: 0px 80px
 
 	&Button
 		font-size: 15px
@@ -49,23 +56,36 @@
 			color: #061e37
 
 	&Logo
+		position: absolute
 		display: flex
 		align-items: center
 		font-weight: normal
-		padding-left: 60px
 		font-size: 20px
 
 	&Logo img
 		width: 50px
 		padding-right: 30px
 
+	&Empty
+		width: 80px
+		height: 5px
+
+	&Special
+		width: 100%
+		height: 100%
+		display: flex
+		flex-direction: row
+		justify-content: center
+		align-items: center
+
+
 //Основа
 .headerBasic
 	z-index: 2
 	display: flex
-	width: calc(100% - (60px * 2))
+	width: calc(100% - 160px)
 	position: relative
-	padding: 0px 60px
+	padding: 0px 80px
 	padding-top: 75px
 	color: #fff
 	font-family: "Rawelay", sans-serif
