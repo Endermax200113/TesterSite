@@ -1,9 +1,9 @@
-var numberTest = 30;
+var numberTest = 31;
 var test = "[Тест №" + numberTest + "] Это тестовый сайт!";
 var update;
 
 var headerBgMainHeight = getValueStyle(".headerBgMain", "height");
-var headerMenuAllHeight = getValueStyle(".headerMenuAll", "height");
+var headerTopHeight = getValueStyle(".headerTop", "height");
 var headerBasicHeight = getValueStyle(".headerBasic", "height");
 
 var headerEmpty = fromElement("#headerEmpty");
@@ -30,13 +30,13 @@ setTimeout(() => startScript(), 2500);
 window.onresize = function(e) {
 	if (!isEmpty(headerEmpty)) {
 		headerBgMainHeight = getValueStyle(".headerBgMain", "height");
-		headerMenuAllHeight = getValueStyle(".headerMenuAll", "height");
+		headerTopHeight = getValueStyle(".headerTop", "height");
 		headerBasicHeight = getValueStyle(".headerBasic", "height");
 
 		setStyleEl(headerEmpty, "height", "calc(" + 
 			headerBgMainHeight + " - " +
-			headerMenuAllHeight + " - " +
-			headerBasicHeight + " - 75);"
+			headerTopHeight + " - " +
+			headerBasicHeight + " - 75px);"
 		);
 	}
 
@@ -87,7 +87,7 @@ function startScript() {
 			"height", 
 			"calc(" + 
 			headerBgMainHeight + " - " + 
-			headerMenuAllHeight + " - " + 
+			headerTopHeight + " - " + 
 			headerBasicHeight + " - 75px);"
 		);
 	}

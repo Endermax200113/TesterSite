@@ -13,6 +13,9 @@
 header
 	position: relative
 
+#headerEmpty
+	position: relative
+
 .header
 	&Bg
 		position: absolute
@@ -88,12 +91,16 @@ header
 				line-height: 25px
 				color: #fff
 				text-decoration: none
+				transition: all .3s ease
+
+				&:hover
+					color: #061e37
 	
 	&Basic
 		z-index: 4
 		display: flex
 		width: calc(100% - 160px)
-		position: absolute
+		position: relative
 		padding: 0px 80px
 		padding-top: 75px
 		color: #fff
