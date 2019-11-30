@@ -1,4 +1,4 @@
-var numberTest = 31;
+var numberTest = 32;
 var test = "[Тест №" + numberTest + "] Это тестовый сайт!";
 var update;
 
@@ -7,6 +7,14 @@ var headerTopHeight = getValueStyle(".headerTop", "height");
 var headerBasicHeight = getValueStyle(".headerBasic", "height");
 
 var headerEmpty = fromElement("#headerEmpty");
+
+var content1Blocks = fromElement(".content1Blocks");
+var content1PagesHere = fromClasses(".content1PagesHere");
+var content1Pages = fromClasses(".content1Pages");
+var content1Page1 = fromElement("#content1Page1");
+var content1Page2 = fromElement("#content1Page2");
+var content1Page3 = fromElement("#content1Page3");
+var content1Page = 1;
 
 var content2 = fromElement(".content2");
 var content2BlockMinimized = fromClasses(".content2BlockMinimized");
@@ -25,9 +33,7 @@ var contactsFormLastCheckBox = fromElement(".contactsFormLastCheckBox");
 var contactsFormLastCheckLabel = fromElement(".contactsFormLastCheckLabel");
 var contactsFormLastCheckMark = false;
 
-setTimeout(() => startScript(), 2500);
-
-window.onresize = function(e) {
+window.addEventListener("resize", function(e) {
 	if (!isEmpty(headerEmpty)) {
 		headerBgMainHeight = getValueStyle(".headerBgMain", "height");
 		headerTopHeight = getValueStyle(".headerTop", "height");
@@ -44,7 +50,15 @@ window.onresize = function(e) {
 		listBgHeight = getValueStyle(".listBg", "height");
 		setStyleEl(list, "height", listBgHeight);
 	}
-}
+
+	if (!mobVerson) {
+		if (!isEmpty(content1Blocks)) {
+			page = 1;
+			for (let el of content1Pages) renameClassEl(el, "content1PagesHere");
+			renameClassEl(content1Page1, "content1PagesNo", "content1PagesHere");
+		}
+	}
+});
 
 document.addEventListener("click", function(e) {
 	let element = e.target;
@@ -55,6 +69,7 @@ document.addEventListener("click", function(e) {
 		isContent2BlockFrom(element, content2Block3) || 
 		isContent2BlockFrom(element, content2Block4) || 
 		isContent2BlockFrom(element, content2Block5))) {
+
 		let block = getContent2Block(element);
 
 		if (endStr(getClassNameEl(block), "Maximized")) {
@@ -71,6 +86,7 @@ document.addEventListener("click", function(e) {
 	} else if (!isEmpty(contacts) && (
 		equalsElements(element, contactsFormLastCheckBox) ||
 		equalsElements(element, contactsFormLastCheckLabel))) {
+
 		if (!contactsFormLastCheckMark) {
 			renameTextEl(contactsFormLastCheckBox, "check_box");
 			contactsFormLastCheckMark = true;
@@ -78,10 +94,33 @@ document.addEventListener("click", function(e) {
 			renameTextEl(contactsFormLastCheckBox, "check_box_outline_blank");
 			contactsFormLastCheckMark = false;
 		}
+	} else if (!isEmpty(content1Blocks) && (
+		equalsElements(element, content1Page1) ||
+		equalsElements(element, content1Page2) ||
+		equalsElements(element, content1Page3))) {
+
+		if (equalsElements(element, content1Page1)) {
+			page = 1;
+			renameClassCl(content1PagesHere, "content1PagesHere", "content1PagesNo");
+			renameClassEl(content1Page1, "content1PagesNo", "content1PagesHere");
+			setStyleEl(content1Blocks, "margin-left", "0%");
+		} else if (equalsElements(element, content1Page2)) {
+			page = 1;
+			renameClassCl(content1PagesHere, "content1PagesHere", "content1PagesNo");
+			renameClassEl(content1Page2, "content1PagesNo", "content1PagesHere");
+			setStyleEl(content1Blocks, "margin-left", "-100%");
+		} else if (equalsElements(element, content1Page3)) {
+			page = 1;
+			renameClassCl(content1PagesHere, "content1PagesHere", "content1PagesNo");
+			renameClassEl(content1Page3, "content1PagesNo", "content1PagesHere");
+			setStyleEl(content1Blocks, "margin-left", "-200%");
+		}
+
+		content1PagesHere = fromClasses(".content1PagesHere");
 	}
 });
 
-function startScript() {
+document.addEventListener("DOMContentLoaded", function(e) {
 	if (!isEmpty(headerEmpty)) {
 		setStyleEl(headerEmpty, 
 			"height", 
@@ -98,7 +137,7 @@ function startScript() {
 			setStyleEl(list, "height", listBgHeight);
 		}
 	}
-}
+});
 
 function isContent2BlockFrom(mainEl, forEl) {
 	let basic = forEl.querySelector(".content2BlockBasic");

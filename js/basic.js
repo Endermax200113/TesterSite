@@ -1,3 +1,17 @@
+var docWidth = window.innerWidth;
+var docHeight = window.innerHeight;
+var mobVersion = spotMobVersion();
+
+window.addEventListener("resize", function(e) {
+	docWidth = window.innerWidth;
+	docHeight = window.innerHeight;
+	mobVersion = spotMobVersion();
+});
+
+function spotMobVersion() {
+	return docWidth > 768 ? false : true;
+}
+
 function existsElement(el) {
 	return !isEmpty(document.querySelector(el)) ? true : false;
 }
