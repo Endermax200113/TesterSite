@@ -1,4 +1,4 @@
-var numberTest = 33;
+var numberTest = 34;
 var test = "[Тест №" + numberTest + "] Это тестовый сайт!";
 var update;
 
@@ -54,8 +54,9 @@ window.addEventListener("resize", function(e) {
 	if (!mobVersion) {
 		if (!isEmpty(content1Blocks)) {
 			page = 1;
-			for (let el of content1Pages) renameClassEl(el, "content1PagesHere");
+			renameClassCl(content1PagesHere, "content1PagesHere", "content1PagesNo");
 			renameClassEl(content1Page1, "content1PagesNo", "content1PagesHere");
+			setStyleEl(content1Blocks, "margin-left", "0%");
 		}
 	}
 });
