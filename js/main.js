@@ -1,19 +1,14 @@
-// -> Переменные
-//ОСНОВА
-var numberTest = 29;
+var numberTest = 30;
 var test = "[Тест №" + numberTest + "] Это тестовый сайт!";
 var update;
 
-//ШАПКА
-//Основы размеров
 var headerBgMainHeight = getValueStyle(".headerBgMain", "height");
 var headerMenuAllHeight = getValueStyle(".headerMenuAll", "height");
 var headerBasicHeight = getValueStyle(".headerBasic", "height");
 
-//Специальная пустота
 var headerEmpty = fromElement("#headerEmpty");
 
-//ВТОРОЙ КОНТЕНТ
+var content2 = fromElement(".content2");
 var content2BlockMinimized = fromClasses(".content2BlockMinimized");
 var content2BlockMaximized = fromClasses(".content2BlockMaximized");
 var content2Block1 = fromElement("#content2Block1");
@@ -22,100 +17,89 @@ var content2Block3 = fromElement("#content2Block3");
 var content2Block4 = fromElement("#content2Block4");
 var content2Block5 = fromElement("#content2Block5");
 
-//ЛИСТ
 var listBgHeight = getValueStyle(".listBg", "height");
 var list = fromElement(".list");
 
-//КОНТАКТЫ
+var contacts = fromElement(".contacts");
 var contactsFormLastCheckBox = fromElement(".contactsFormLastCheckBox");
 var contactsFormLastCheckLabel = fromElement(".contactsFormLastCheckLabel");
 var contactsFormLastCheckMark = false;
 
-// -! Выполнение скрипта при загрузки страницы !-
 setTimeout(() => startScript(), 2500);
 
-// -> Слушатели
-// -! Во время изменения окна !-
 window.onresize = function(e) {
-	headerBgMainHeight = getValueStyle(".headerBgMain", "height");
-	headerMenuAllHeight = getValueStyle(".headerMenuAll", "height");
-	headerBasicHeight = getValueStyle(".headerBasic", "height");
+	if (!isEmpty(headerEmpty)) {
+		headerBgMainHeight = getValueStyle(".headerBgMain", "height");
+		headerMenuAllHeight = getValueStyle(".headerMenuAll", "height");
+		headerBasicHeight = getValueStyle(".headerBasic", "height");
 
-	headerEmpty.style = "height: calc(" + 
-						headerBgMainHeight + " - " + 
-						headerMenuAllHeight + " - " + 
-						headerBasicHeight + " - 75px);";
+		setStyleEl(headerEmpty, "height", "calc(" + 
+			headerBgMainHeight + " - " +
+			headerMenuAllHeight + " - " +
+			headerBasicHeight + " - 75);"
+		);
+	}
 
-	listBgHeight = getValueStyle(".listBg", "height");
-	list.style = "height: " + listBgHeight;
+	if (!isEmpty(list)) {
+		listBgHeight = getValueStyle(".listBg", "height");
+		setStyleEl(list, "height", listBgHeight);
+	}
 }
 
-// -! Во время клика элемента !-
 document.addEventListener("click", function(e) {
 	let element = e.target;
 
-	if (isContent2BlockFrom(element, content2Block1) || 
+	if (!isEmpty(content2) && (
+		isContent2BlockFrom(element, content2Block1) || 
 		isContent2BlockFrom(element, content2Block2) || 
 		isContent2BlockFrom(element, content2Block3) || 
 		isContent2BlockFrom(element, content2Block4) || 
-		isContent2BlockFrom(element, content2Block5)) {
+		isContent2BlockFrom(element, content2Block5))) {
 		let block = getContent2Block(element);
 
-		if (block.className.endsWith("Maximized")) {
-			block.classList.remove("content2BlockMaximized");
-			block.classList.add("content2BlockMinimized");
-			fromElement(".content2").style = "height: 680px";
-		} else if (block.className.endsWith("Minimized")) {
-			for (let el of content2BlockMaximized) {
-				el.classList.remove("content2BlockMaximized");
-				el.classList.add("content2BlockMinimized");
-			}
-
-			block.classList.remove("content2BlockMinimized");
-			block.classList.add("content2BlockMaximized");
-			fromElement(".content2").style = "height: 870px";
+		if (endStr(getClassNameEl(block), "Maximized")) {
+			renameClassEl(block, "content2BlockMaximized", "content2BlockMinimized");
+			setStyleEl(content2, "height", "680px");
+		} else if (endStr(getClassNameEl(block), "Minimized")) {
+			renameClassCl(content2BlockMaximized, "content2BlockMaximized", "content2BlockMinimized");
+			renameClassEl(block, "content2BlockMinimized", "content2BlockMaximized");
+			setStyleEl(content2, "height", "870px")
 		}
 
 		content2BlockMinimized = fromClasses(".content2BlockMinimized");
 		content2BlockMaximized = fromClasses(".content2BlockMaximized");
-	} else if (element == contactsFormLastCheckBox || element == contactsFormLastCheckLabel) {
+	} else if (!isEmpty(contacts) && (
+		equalsElements(element, contactsFormLastCheckBox) ||
+		equalsElements(element, contactsFormLastCheckLabel))) {
 		if (!contactsFormLastCheckMark) {
-			contactsFormLastCheckBox.innerText = "check_box";
+			renameTextEl(contactsFormLastCheckBox, "check_box");
 			contactsFormLastCheckMark = true;
 		} else {
-			contactsFormLastCheckBox.innerText = "check_box_outline_blank";
+			renameTextEl(contactsFormLastCheckBox, "check_box_outline_blank");
 			contactsFormLastCheckMark = false;
 		}
 	}
 });
 
-// -> Функции
-//ОСНОВА
 function startScript() {
-	headerEmpty.style = "height: calc(" + 
-						headerBgMainHeight + " - " + 
-						headerMenuAllHeight + " - " + 
-						headerBasicHeight + " - 75px);";
+	if (!isEmpty(headerEmpty)) {
+		setStyleEl(headerEmpty, 
+			"height", 
+			"calc(" + 
+			headerBgMainHeight + " - " + 
+			headerMenuAllHeight + " - " + 
+			headerBasicHeight + " - 75px);"
+		);
+	}
 
-	for (update = 0; update < 100; update++) {
-		listBgHeight = getValueStyle(".listBg", "height");
-		list.style = "height: " + listBgHeight;
+	if (!isEmpty(list)) {
+		for (update = 0; update < 100; update++) {
+			listBgHeight = getValueStyle(".listBg", "height");
+			setStyleEl(list, "height", listBgHeight);
+		}
 	}
 }
 
-function fromElement(el) {
-	return document.querySelector(el);
-}
-
-function fromClasses(el) {
-	return document.querySelectorAll(el);
-}
-
-function getValueStyle(el, type) {
-	return window.getComputedStyle(fromElement(el)).getPropertyValue(type);
-}
-
-//ВТОРОЙ КОНТЕНТ
 function isContent2BlockFrom(mainEl, forEl) {
 	let basic = forEl.querySelector(".content2BlockBasic");
 	let basicLeft = forEl.querySelector(".content2BlockBasic").
@@ -135,15 +119,15 @@ function isContent2BlockFrom(mainEl, forEl) {
 							 querySelector(".content2BlockDetailsDescription");
 	let self = forEl;
 
-	if (mainEl == basic) return true;
-	else if (mainEl == basicLeft) return true;
-	else if (mainEl == basicLeftIcon) return true;
-	else if (mainEl == basicLeftTitle) return true;
-	else if (mainEl == basicRight) return true;
-	else if (mainEl == details) return true;
-	else if (mainEl == detailsImage) return true;
-	else if (mainEl == detailsDescription) return true;
-	else if (mainEl == forEl) return true;
+	if (equalsElements(mainEl, basic)) return true;
+	else if (equalsElements(mainEl, basicLeft)) return true;
+	else if (equalsElements(mainEl, basicLeftIcon)) return true;
+	else if (equalsElements(mainEl, basicLeftTitle)) return true;
+	else if (equalsElements(mainEl, basicRight)) return true;
+	else if (equalsElements(mainEl, details)) return true;
+	else if (equalsElements(mainEl, detailsImage)) return true;
+	else if (equalsElements(mainEl, detailsDescription)) return true;
+	else if (equalsElements(mainEl, self)) return true;
 	else return false;
 }
 
@@ -154,9 +138,4 @@ function getContent2Block(mainEl) {
 	else if (isContent2BlockFrom(mainEl, content2Block4)) return content2Block4; 
 	else if (isContent2BlockFrom(mainEl, content2Block5)) return content2Block5; 
 	else return null;
-}
-
-//КОНТАКТЫ
-function test() {
-	alert("Сработало!");
 }

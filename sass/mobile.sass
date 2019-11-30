@@ -1,0 +1,184 @@
+@media only screen and (max-width: 425px)
+	.header
+		&Bg
+			&Main
+				display: none
+
+			&Gradient
+				height: 320px
+				z-index: 2
+
+		&Top
+			position: relative
+			z-index: 3
+			padding: 0px 10px
+			width: calc(100% - 20px)
+			height: 45px
+			
+			&Image
+				display: initial
+				width: 30px
+
+			&Logo
+				flex-direction: row-reverse
+				justify-content: flex-end
+				
+				&Image
+					width: 30px
+					padding-left: 10px
+					padding-right: 0px
+			
+			//Меню не доработано
+			&Menu
+				display: none
+
+				&Special
+					display: flex
+					flex-direction: row
+					justify-content: center
+					align-items: center
+
+				&All
+					width: 440px
+					display: flex
+					flex-direction: row
+					justify-content: space-between
+					align-items: center
+
+				&Button
+					font-family: "Raleway", sans-serif
+					font-size: 15px
+					line-height: 25px
+					color: #fff
+					text-decoration: none
+
+		&Basic
+			position: relative
+			flex-direction: column
+			width: calc(100% - 20px)
+			padding: 0px 10px
+			padding-top: 20px
+			height: auto
+			justify-content: space-between
+
+			&Text
+				width: auto
+
+				&Title
+					font-weight: normal
+					font-size: 15px
+					font-weight: bold
+					line-height: 20px
+					text-transform: uppercase
+					text-align: center
+					height: auto
+
+				&Description
+					font-size: 10px
+					line-height: 25px
+					text-align: center
+
+				&Buttons
+					display: none
+
+				&ButtonOrder
+					padding: 15px 45px
+					background-color: #061e37
+					border-radius: 5px
+					transition: all .3s ease
+					cursor: pointer
+					
+					&:hover
+						background-color: #0d355f
+
+					&:active
+						background-color: #06182c
+
+				&ButtonCall
+					padding: 15px 45px
+					background-color: #fff
+					border-radius: 5px
+					color: #061e37
+					cursor: pointer
+					transition: all .3s ease
+
+					&:hover
+						background-color: #ccc
+
+					&:active
+						background-color: #999
+						color: #fff
+
+			&Video
+				display: flex
+				flex-direction: row
+				justify-content: center
+				width: 100%
+				
+				&Bg
+					margin-top: -3px
+					margin-left: 0px
+					width: 274px
+					height: 160px
+				
+				&Main
+					width: 260px
+					height: 145px
+				
+					&White
+						width: 260px
+						height: 145px
+					
+					&Play
+						border-radius: 2px
+						width: 30px
+						height: 30px
+						font-size: 15px
+						margin-top: 20px
+					
+					&Text
+						font-size: 10px
+						line-height: 20px
+	
+		&Buttons
+			position: relative
+			padding: 0px 10px
+			display: flex
+			flex-direction: row
+			justify-content: center
+			align-items: center
+			z-index: 4
+			font-family: "Raleway", sans-serif
+			font-size: 10px
+			height: 65px
+			width: calc(100% - 20px)
+
+			&Order
+				padding: 10px 15px
+				background-color: #061e37
+				border-radius: 3px
+				transition: all .3s ease
+				cursor: pointer
+				color: #fff
+				margin-right: 10px
+				
+				&:hover
+					background-color: #0d355f
+				
+				&:active
+					background-color: #06182c
+
+			&Call
+				padding: 10px 15px
+				background-color: #fff
+				border-radius: 3px
+				transition: all .3s ease
+				cursor: pointer
+				color: #061e37
+
+				&:hover
+					background-color: #ccc
+
+				&:active
+					background-color: #999
+					color: #fff

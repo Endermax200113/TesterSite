@@ -8,40 +8,38 @@
 		<link rel="icon" href="img/favicon.png">
 		<meta property="og:image" content="img/@1x/preview.jpg">
 		<link rel="stylesheet" href="css/styles.min.css">
+		<script type="text/javascript" src="js/basic.js"></script>
 	</head>
 	
 	<body>
-		<!-- ШАПКА -->
 		<header>
-			<!-- Задний фон -->
 			<div class="headerBg">
 				<img class="headerBgGradient" src="img/@1x/headerBgGradient.png" alt="Градиент на заднем фоне">
 				<img class="headerBgMain" src="img/@1x/headerBg.png" alt="Задний фон на header">
 			</div>
-			
-			<!-- Меню -->
-			<div class="headerMenuAll">
-				<a class="headerMenuButton headerMenuLogo" href="#">
-					<img src="img/@1x/logo.png" alt="Логотип">
+
+			<div class="headerTop">
+				<img src="img/@2x/headerTopMenu.png" alt="Меню" class="headerTopImage">
+				
+				<a class="headerTopLogo" href="#">
+					<img src="img/@1x/logo.png" alt="Логотип" class="headerTopLogoImage">
 					PSKOVPAGES
 				</a>
-				
-				<div class="headerMenuSpecial">
-					<div class="headerMenu">
-						<a class="headerMenuButton" href="#">Главная</a>
-						<a class="headerMenuButton" href="#">Сервисы</a>
-						<a class="headerMenuButton" href="#">Расширение</a>
-						<a class="headerMenuButton" href="#">Цены</a>
-						<a class="headerMenuButton" href="#">Помощь</a>
+
+				<div class="headerTopMenu">
+					<div class="headerTopMenuSpecial">
+						<div class="headerTopMenuAll">
+							<a class="headerTopMenuButton" href="#">Главная</a>
+							<a class="headerTopMenuButton" href="#">Сервисы</a>
+							<a class="headerTopMenuButton" href="#">Расширение</a>
+							<a class="headerTopMenuButton" href="#">Цены</a>
+							<a class="headerTopMenuButton" href="#">Помощь</a>
+						</div>
 					</div>
 				</div>
-
-				<!--div class="headerMenuEmpty"></div-->
 			</div>
-
-			<!-- Основа -->
+			
 			<div class="headerBasic">
-				<!-- _Тексты_ -->
 				<div class="headerBasicText">
 					<div class="headerBasicTextTitle">Компания по разработке сайтов</div>
 					<div class="headerBasicTextDescription">Мы разрабатываем сайты любой сложности</div>
@@ -52,7 +50,6 @@
 					</div>
 				</div>
 				
-				<!-- _Видео_ -->
 				<div class="headerBasicVideo">
 					<img class="headerBasicVideoBg" src="img/@2x/headerBasicVideoBg.png" alt="Задний фон видео на основном шапке">
 					<div class="headerBasicVideoMain">
@@ -64,14 +61,19 @@
 					</div>
 				</div>
 			</div>
+			
+			<div class="headerButtons">
+				<div class="headerButtonsOrder">Заказать</div>
+				<div class="headerButtonsCall">Позвонить</div>
+			</div>
 
-			<!-- Специальная пустота -->
 			<div id="headerEmpty"></div>
 		</header>
 		
-		<!-- ПЕРВЫЙ КОНТЕНТ -->
+		<div class="empty"></div>
+
+		<!--
 		<div class="content1">
-			<!-- Тексты -->
 			<div class="content1Text">
 				<div class="content1TextTitle">Easy & Useful</div>
 				<div class="content1TextSubtitle">Project Management Tool</div>
@@ -80,9 +82,7 @@
 				</div>
 			</div>
 			
-			<!-- Блоки -->
 			<div class="content1Blocks">
-				<!-- _1 блок_ -->
 				<div class="content1Block">
 					<div class="content1BlockImage"><img src="img/@2x/content1BlockImage1.png" alt="1 рисунок этого блока"></div>
 					<div class="content1BlockTitle">Title Goes Here</div>
@@ -91,7 +91,6 @@
 					</div>
 				</div>
 				
-				<!-- _2 блок_ -->
 				<div class="content1Block">
 					<div class="content1BlockImage"><img src="img/@2x/content1BlockImage2.png" alt="2 рисунок этого блока"></div>
 					<div class="content1BlockTitle">Title Goes Here</div>
@@ -100,7 +99,6 @@
 					</div>
 				</div>
 				
-				<!-- _3 блок_ -->
 				<div class="content1Block">
 					<div class="content1BlockImage"><img src="img/@2x/content1BlockImage3.png" alt="2 рисунок этого блока"></div>
 					<div class="content1BlockTitle">Title Goes Here</div>
@@ -110,13 +108,10 @@
 				</div>
 			</div>
 			
-			<!-- Кнопка -->
 			<div class="content1Button">get started</div>
 		</div>
 		
-		<!-- ИНФОРМАЦИЯ -->
 		<div class="info">
-			<!-- 1 блок -->
 			<div class="infoBlock1">
 				<div class="infoBlockImage1">business</div>
 				<div class="infoBlockText">
@@ -125,7 +120,6 @@
 				</div>
 			</div>
 			
-			<!-- 2 блок -->
 			<div class="infoBlock2">
 				<div class="infoBlockImage2">file_download</div>
 				<div class="infoBlockText">
@@ -134,7 +128,6 @@
 				</div>
 			</div>
 			
-			<!-- 3 блок -->
 			<div class="infoBlock3">
 				<div class="infoBlockImage3">person</div>
 				<div class="infoBlockText">
@@ -143,7 +136,6 @@
 				</div>
 			</div>
 			
-			<!-- 4 блок -->
 			<div class="infoBlock4">
 				<div class="infoBlockImage4">file_download</div>
 				<div class="infoBlockText">
@@ -153,9 +145,7 @@
 			</div>
 		</div>
 		
-		<!-- ВТОРОЙ КОНТЕНТ -->
 		<div class="content2">
-			<!-- Текст -->
 			<div class="content2Text">
 				<div class="content2TextTitle">Services</div>
 				<div class="content2TextDescription">
@@ -163,9 +153,7 @@
 				</div>
 			</div>
 			
-			<!-- Блоки -->
 			<div class="content2Blocks">
-				<!-- _1 блок_ -->
 				<div class="content2BlockMaximized" id="content2Block1">
 					<div class="content2BlockBasic">
 						<div class="content2BlockBasicLeft">
@@ -186,7 +174,6 @@
 					</div>
 				</div>
 				
-				<!-- _2 блок_ -->
 				<div class="content2BlockMinimized" id="content2Block2">
 					<div class="content2BlockBasic">
 						<div class="content2BlockBasicLeft">
@@ -207,7 +194,6 @@
 					</div>
 				</div>
 				
-				<!-- _3 блок_ -->
 				<div class="content2BlockMinimized" id="content2Block3">
 					<div class="content2BlockBasic">
 						<div class="content2BlockBasicLeft">
@@ -228,7 +214,6 @@
 					</div>
 				</div>
 				
-				<!-- _4 блок_ -->
 				<div class="content2BlockMinimized" id="content2Block4">
 					<div class="content2BlockBasic">
 						<div class="content2BlockBasicLeft">
@@ -249,7 +234,6 @@
 					</div>
 				</div>
 				
-				<!-- _5 блок_ -->
 				<div class="content2BlockMinimized" id="content2Block5">
 					<div class="content2BlockBasic">
 						<div class="content2BlockBasicLeft">
@@ -272,15 +256,11 @@
 			</div>
 		</div>
 		
-		<!-- ЛИСТ -->
 		<div class="list">
-			<!-- Задний фон -->
 			<img src="img/@2x/listBg.png" alt="Задний фон на листе" class="listBg">
 			<img src="img/@2x/listGradient.png" alt="Градиент на листе" class="listGradient">
 			
-			<!-- Гланые блоки -->
 			<div class="listMain">
-				<!-- _Левая часть_ -->
 				<div class="listMainText">
 					<div class="listMainTextBasic">
 						<div class="listMainTextBasicTitle">What our customers have to say about us.</div>
@@ -292,10 +272,8 @@
 					<div class="listMainTextButton">get started</div>
 				</div>
 				
-				<!-- _Правая часть_ -->
 				<div class="listMainWorkers">
 					<div class="listMainWorkersBlocks">
-						<!-- -1 блок- -->
 						<div class="listMainWorkersBlock">
 							<img src="img/@2x/listAvatar1.png" alt="Аватарка" class="listMainWorkersBlockImage">
 							<div class="listMainWorkersBlockPanel">
@@ -306,7 +284,6 @@
 							</div>
 						</div>
 						
-						<!-- -2 блок- -->
 						<div class="listMainWorkersBlock">
 							<img src="img/@2x/listAvatar2.png" alt="Аватарка" class="listMainWorkersBlockImage">
 							<div class="listMainWorkersBlockPanel">
@@ -321,9 +298,7 @@
 			</div>
 		</div>
 		
-		<!-- ТРЕТИЙ КОНТЕНТ -->
 		<div class="content3">
-			<!-- Текст -->
 			<div class="content3Text">
 				<div class="content3TextTitle">Our Team</div>
 				<div class="content3TextDescription">
@@ -331,55 +306,43 @@
 				</div>
 			</div>
 			
-			<!-- Аватарки -->
 			<div class="content3Avatars">
-				<!-- _1 аватарка_ -->
 				<div class="content3AvatarsSecond">
 					<img src="img/@2x/content3Avatars3.png" alt="Аватарка">
 				</div>
 				
-				<!-- _2 аватарка_ -->
 				<div class="content3AvatarsFirst">
 					<img src="img/@2x/content3Avatars1.png" alt="Аватарка">
 				</div>
 				
-				<!-- _3 аватарка_ -->
 				<div class="content3AvatarsSecond">
 					<img src="img/@2x/content3Avatars2.png" alt="Аватарка">
 				</div>
 			</div>
 			
-			<!-- Подробности -->
 			<div class="content3Details">
-				<!-- _Текст_ -->
 				<div class="content3DetailsName">Sophie Turner</div>
 				<div class="content3DetailsDescription">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
 				</div>
 
-				<!-- _Социальные иконки_ -->
 				<div class="content3DetailsSocial">
-					<!-- -1 соцальная иконка- -->
 					<a href="#" class="content3SocialIcon">
 						<img src="img/@2x/content3SocialTwitter.png" alt="Социальная иконка">
 					</a>
 					
-					<!-- -2 соцальная иконка- -->
 					<a href="#" class="content3SocialIcon">
 						<img src="img/@2x/content3SocialFacebook.png" alt="Социальная иконка">
 					</a>
 					
-					<!-- -3 соцальная иконка- -->
 					<a href="#" class="content3SocialIcon">
 						<img src="img/@2x/content3SocialIn.png" alt="Социальная иконка">
 					</a>
 					
-					<!-- -4 соцальная иконка- -->
 					<a href="#" class="content3SocialIcon">
 						<img src="img/@2x/content3SocialInternet.png" alt="Социальная иконка">
 					</a>
 					
-					<!-- -5 соцальная иконка- -->
 					<a href="#" class="content3SocialIcon">
 						<img src="img/@2x/content3SocialBe.png" alt="Социальная иконка">
 					</a>
@@ -387,7 +350,6 @@
 			</div>
 		</div>
 		
-		<!-- КОНТАКТЫ -->
 		<div class="contacts">
 			<div class="contactsText">
 				<div class="contactsTextTitle">Contact Us</div>
@@ -424,9 +386,7 @@
 			</div>
 		</div>
 		
-		<!-- ФУТЕР -->
 		<footer>
-			<!-- Меню -->
 			<div class="footerMenu">
 				<a href="#" class="footerMenuLeft">
 					<img src="img/@1x/logo.png" alt="Логотип" class="footerMenuLeftImage">
@@ -442,7 +402,6 @@
 				</div>
 			</div>
 			
-			<!-- Нижний блок -->
 			<div class="footerBottom">
 				<div class="footerBottomLeft">
 					<a href="#" class="footerBottomLeftText">Privecy Policy</a>
@@ -452,7 +411,6 @@
 					<a href="#" class="footerBottomLeftText">About Us</a>
 				</div>
 				
-				<!-- Социальные иконки -->
 				<div class="footerBottomRight">
 					<a href="#" class="footerBottomRightSocial">
 						<img src="img/@2x/footerSocialFacebook.png" alt="Социальная иконка">
@@ -476,9 +434,9 @@
 				</div>
 			</div>
 		</footer>
+		-->
 		
-		<!-- ПОДКЛЮЧЕНИЕ JAVASCRIPT -->
-		<script type="text/javascript" src="js/scripts.min.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/scripts.min.js"></script>		
 	</body>
 </html>
