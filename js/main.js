@@ -1,4 +1,4 @@
-var numberTest = 32;
+var numberTest = 33;
 var test = "[Тест №" + numberTest + "] Это тестовый сайт!";
 var update;
 
@@ -51,7 +51,7 @@ window.addEventListener("resize", function(e) {
 		setStyleEl(list, "height", listBgHeight);
 	}
 
-	if (!mobVerson) {
+	if (!mobVersion) {
 		if (!isEmpty(content1Blocks)) {
 			page = 1;
 			for (let el of content1Pages) renameClassEl(el, "content1PagesHere");
