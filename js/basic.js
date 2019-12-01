@@ -17,7 +17,10 @@ function existsElement(el) {
 }
 
 function existsClasses(cl) {
-	return !isEmpty(document.querySelectorAll(cl)) ? true : false;
+	if (!isEmpty(document.querySelectorAll(cl))) {
+		if (document.querySelectorAll(cl).length >= 1) return true;
+		else return false;
+	} else return false;
 }
 
 function fromElement(el) {

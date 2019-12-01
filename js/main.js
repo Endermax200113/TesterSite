@@ -1,4 +1,4 @@
-var numberTest = 37;
+var numberTest = 38;
 var test = "[Тест №" + numberTest + "] Это тестовый сайт!";
 var update;
 
@@ -67,6 +67,14 @@ window.addEventListener("resize", function(e) {
 			content1PagesHere = fromClasses(".content1PagesHere");
 		}
 	}
+
+	if (mobVersion) {
+		if (!isEmpty(content2BlockMaximized)) setStyleEl(content2, "height", "360px");
+		else setStyleEl(content2, "height", "300px");
+	} else {
+		if (!isEmpty(content2BlockMaximized)) setStyleEl(content2, "height", "870px");
+		else setStyleEl(content2, "height", "680px");
+	}
 });
 
 document.addEventListener("click", function(e) {
@@ -83,11 +91,11 @@ document.addEventListener("click", function(e) {
 
 		if (endStr(getClassNameEl(block), "Maximized")) {
 			renameClassEl(block, "content2BlockMaximized", "content2BlockMinimized");
-			setStyleEl(content2, "height", "680px");
+			!mobVersion ? setStyleEl(content2, "height", "680px") : setStyleEl(content2, "height", "300px");
 		} else if (endStr(getClassNameEl(block), "Minimized")) {
 			renameClassCl(content2BlockMaximized, "content2BlockMaximized", "content2BlockMinimized");
 			renameClassEl(block, "content2BlockMinimized", "content2BlockMaximized");
-			setStyleEl(content2, "height", "870px")
+			!mobVersion ? setStyleEl(content2, "height", "870px") : setStyleEl(content2, "height", "360px");
 		}
 
 		content2BlockMinimized = fromClasses(".content2BlockMinimized");
