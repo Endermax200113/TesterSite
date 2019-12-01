@@ -1,4 +1,4 @@
-var numberTest = 35;
+var numberTest = 36;
 var test = "[Тест №" + numberTest + "] Это тестовый сайт!";
 var update;
 
@@ -175,7 +175,7 @@ document.addEventListener("touchmove", function(e) {
 		if (Math.abs(xDiff) > Math.abs(yDiff)) {
 			if (xDiff > 0) {
 				if (isContent1Blocks(element)) {
-					if (xDiff > 10) {
+					if (xDiff > 8) {
 						content1PagesHere = fromClasses(".content1PagesHere");
 
 						if (content1Page == 1) {
@@ -195,7 +195,7 @@ document.addEventListener("touchmove", function(e) {
 				}
 			} else {
 				if (isContent1Blocks(element)) {
-					if (xDiff < 10) {
+					if (xDiff < -8) {
 						content1PagesHere = fromClasses(".content1PagesHere");
 
 						if (content1Page == 3) {
