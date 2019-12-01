@@ -353,3 +353,95 @@
 				&Description
 					font-size: 7px
 					line-height: 7px
+
+	.list
+		overflow: hidden
+		height: 230px
+		
+		&Bg
+			width: unset
+			height: 230px
+			margin-left: -45%
+
+		&Gradient
+			height: 230px
+		
+		&Main
+			width: calc(100% - 20px)
+			height: 220px
+			flex-direction: column
+			justify-content: space-around
+			align-items: space-between
+			padding: 7px 10px 0px 10px
+			
+			&Text
+				width: 100%
+				max-width: 100%
+				height: 35px
+				
+				&Basic
+					font-family: "Raleway", sans-serif
+					font-weight: 600
+
+					&Title
+						font-size: 15px
+						text-align: center
+
+					&Description
+						font-size: 10px
+						line-height: 12px
+						font-weight: normal
+						text-align: center
+
+				&Button
+					display: none
+			
+			&Workers
+				height: 145px
+				width: 100%
+				padding-top: 10px
+				
+				&Blocks
+					height: 145px
+					width: 100%
+
+				&Block
+					justify-content: center
+					width: 100%
+
+					&Image
+						box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1)
+						width: 30px
+					
+					&Panel
+						width: calc(100% - 100px)
+						height: 45px
+						padding: 10px
+						border-radius: 3px
+						box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1)
+						margin-left: 15px
+						
+						&Title
+							font-size: 10px
+							
+						&Description
+							line-height: 10px
+							font-size: 7px
+
+		&Button
+			display: initial
+			background-color: #061e37
+			border-radius: 3px
+			padding: 5px 15px
+			color: #fff
+			font-family: "Raleway", sans-serif
+			font-weight: 500
+			font-size: 12px
+			text-transform: uppercase
+			transition: all .3s ease
+
+			&:hover
+				background-color: #0d355f
+
+			&:active
+				background-color: #06182c

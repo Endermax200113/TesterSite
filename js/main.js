@@ -1,4 +1,4 @@
-var numberTest = 39;
+var numberTest = 40;
 var test = "[Тест №" + numberTest + "] Это тестовый сайт!";
 var update;
 
@@ -51,8 +51,10 @@ window.addEventListener("resize", function(e) {
 	}
 
 	if (!isEmpty(list)) {
-		listBgHeight = getValueStyle(".listBg", "height");
-		setStyleEl(list, "height", listBgHeight);
+		if (!mobVersion) {
+			listBgHeight = getValueStyle(".listBg", "height");
+			setStyleEl(list, "height", listBgHeight);
+		} else setStyleEl(list, "height", "230px");
 	}
 
 	if (!mobVersion) {
@@ -153,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 	}
 
 	if (!isEmpty(list)) {
-		for (update = 0; update < 100; update++) {
+		if (!mobVersion) for (update = 0; update < 100; update++) {
 			listBgHeight = getValueStyle(".listBg", "height");
 			setStyleEl(list, "height", listBgHeight);
 		}
