@@ -1,4 +1,4 @@
-var numberTest = 40;
+var numberTest = 41;
 var test = "[Тест №" + numberTest + "] Это тестовый сайт!";
 var update;
 
