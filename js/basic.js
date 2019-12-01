@@ -32,6 +32,10 @@ function getValueStyle(el, type) {
 	return existsElement(el) ? window.getComputedStyle(fromElement(el)).getPropertyValue(type) : null;
 }
 
+function getValueStyleEl(el, type) {
+	return !isEmpty(el) ? window.getComputedStyle(el).getPropertyValue(type) : null;
+}
+
 function equalsElements(el1, el2) {
 	return el1 == el2 ? true : false;
 }

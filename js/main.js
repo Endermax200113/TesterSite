@@ -1,4 +1,4 @@
-var numberTest = 34;
+var numberTest = 35;
 var test = "[Тест №" + numberTest + "] Это тестовый сайт!";
 var update;
 
@@ -9,11 +9,15 @@ var headerBasicHeight = getValueStyle(".headerBasic", "height");
 var headerEmpty = fromElement("#headerEmpty");
 
 var content1Blocks = fromElement(".content1Blocks");
+var content1Block = fromClasses(".content1Block");
 var content1PagesHere = fromClasses(".content1PagesHere");
 var content1Pages = fromClasses(".content1Pages");
 var content1Page1 = fromElement("#content1Page1");
 var content1Page2 = fromElement("#content1Page2");
 var content1Page3 = fromElement("#content1Page3");
+var content1Block1 = fromElement("#content1Block1");
+var content1Block2 = fromElement("#content1Block2");
+var content1Block3 = fromElement("#content1Block3");
 var content1Page = 1;
 
 var content2 = fromElement(".content2");
@@ -53,10 +57,14 @@ window.addEventListener("resize", function(e) {
 
 	if (!mobVersion) {
 		if (!isEmpty(content1Blocks)) {
-			page = 1;
+			content1PagesHere = fromClasses(".content1PagesHere");
+
+			content1Page = 1;
 			renameClassCl(content1PagesHere, "content1PagesHere", "content1PagesNo");
 			renameClassEl(content1Page1, "content1PagesNo", "content1PagesHere");
 			setStyleEl(content1Blocks, "margin-left", "0%");
+
+			content1PagesHere = fromClasses(".content1PagesHere");
 		}
 	}
 });
@@ -100,18 +108,20 @@ document.addEventListener("click", function(e) {
 		equalsElements(element, content1Page2) ||
 		equalsElements(element, content1Page3))) {
 
+		content1PagesHere = fromClasses(".content1PagesHere");
+
 		if (equalsElements(element, content1Page1)) {
-			page = 1;
+			content1Page = 1;
 			renameClassCl(content1PagesHere, "content1PagesHere", "content1PagesNo");
 			renameClassEl(content1Page1, "content1PagesNo", "content1PagesHere");
 			setStyleEl(content1Blocks, "margin-left", "0%");
 		} else if (equalsElements(element, content1Page2)) {
-			page = 1;
+			content1Page = 2;
 			renameClassCl(content1PagesHere, "content1PagesHere", "content1PagesNo");
 			renameClassEl(content1Page2, "content1PagesNo", "content1PagesHere");
 			setStyleEl(content1Blocks, "margin-left", "-100%");
 		} else if (equalsElements(element, content1Page3)) {
-			page = 1;
+			content1Page = 3;
 			renameClassCl(content1PagesHere, "content1PagesHere", "content1PagesNo");
 			renameClassEl(content1Page3, "content1PagesNo", "content1PagesHere");
 			setStyleEl(content1Blocks, "margin-left", "-200%");
@@ -122,6 +132,8 @@ document.addEventListener("click", function(e) {
 });
 
 document.addEventListener("DOMContentLoaded", function(e) {
+	console.log(test);
+
 	if (!isEmpty(headerEmpty)) {
 		setStyleEl(headerEmpty, 
 			"height", 
@@ -139,6 +151,98 @@ document.addEventListener("DOMContentLoaded", function(e) {
 		}
 	}
 });
+
+var xDown = null;
+var yDown = null;
+document.addEventListener("touchstart", function(e) {
+	if (mobVersion) {
+		xDown = e.touches[0].clientX;
+		yDown = e.touches[0].clientY;
+	}
+});
+
+document.addEventListener("touchmove", function(e) {
+	if (mobVersion) {
+		if (!xDown || !yDown) return;
+		let element = e.target;
+
+		var xUp = e.touches[0].clientX;
+		var yUp = e.touches[0].clientY;
+
+		var xDiff = xDown - xUp;
+		var yDiff = yDown - yUp;
+
+		if (Math.abs(xDiff) > Math.abs(yDiff)) {
+			if (xDiff > 0) {
+				if (isContent1Blocks(element)) {
+					if (xDiff > 10) {
+						content1PagesHere = fromClasses(".content1PagesHere");
+
+						if (content1Page == 1) {
+							content1Page = 2;
+							renameClassCl(content1PagesHere, "content1PagesHere", "content1PagesNo");
+							renameClassEl(content1Page2, "content1PagesNo", "content1PagesHere");
+							setStyleEl(content1Blocks, "margin-left", "-100%");
+						} else if (content1Page == 2) {
+							content1Page = 3;
+							renameClassCl(content1PagesHere, "content1PagesHere", "content1PagesNo");
+							renameClassEl(content1Page3, "content1PagesNo", "content1PagesHere");
+							setStyleEl(content1Blocks, "margin-left", "-200%");
+						} else if (content1Page == 3) return;
+
+						content1PagesHere = fromClasses(".content1PagesHere");
+					}
+				}
+			} else {
+				if (isContent1Blocks(element)) {
+					if (xDiff < 10) {
+						content1PagesHere = fromClasses(".content1PagesHere");
+
+						if (content1Page == 3) {
+							content1Page = 2;
+							renameClassCl(content1PagesHere, "content1PagesHere", "content1PagesNo");
+							renameClassEl(content1Page2, "content1PagesNo", "content1PagesHere");
+							setStyleEl(content1Blocks, "margin-left", "-100%");
+						} else if (content1Page == 2) {
+							content1Page = 1;
+							renameClassCl(content1PagesHere, "content1PagesHere", "content1PagesNo");
+							renameClassEl(content1Page1, "content1PagesNo", "content1PagesHere");
+							setStyleEl(content1Blocks, "margin-left", "0%");
+						} else if (content1Page == 1) return;
+
+						content1PagesHere = fromClasses(".content1PagesHere");
+					}
+				}
+			}
+		}
+
+		xDown = null;
+		yDown = null;
+	}
+});
+
+function isContent1Blocks(mainEl) {
+	let blocks = fromElement(".content1Blocks");
+	let block = null;
+	let blockImage = null;
+	let blockTitle = null;
+	let blockDescription = null;
+
+	for (let el of content1Block) {
+		block = el;
+		blockImage = el.querySelector(".content1BlockImage");
+		blockTitle = el.querySelector(".content1BlockTitle");
+		blockDescription = el.querySelector(".content1BlockDescription");
+
+		if (equalsElements(mainEl, block)) return true;
+		else if (equalsElements(mainEl, blockImage)) return true;
+		else if (equalsElements(mainEl, blockTitle)) return true;
+		else if (equalsElements(mainEl, blockDescription)) return true;
+	}
+
+	if (equalsElements(mainEl, blocks)) return true;
+	else return false;
+}
 
 function isContent2BlockFrom(mainEl, forEl) {
 	let basic = forEl.querySelector(".content2BlockBasic");
