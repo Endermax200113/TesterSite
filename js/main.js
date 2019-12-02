@@ -1,4 +1,4 @@
-var numberTest = 42;
+var numberTest = 43;
 var test = "[Тест №" + numberTest + "] Это тестовый сайт!";
 var update;
 
@@ -141,8 +141,8 @@ document.addEventListener("click", function(e) {
 	}
 });
 
-document.addEventListener("load", function(e) {
-	console.log(test);
+document.addEventListener("DOMContentLoaded", function(e) {
+	console.info(test);
 
 	if (!isEmpty(headerEmpty)) {
 		setStyleEl(headerEmpty, 
@@ -152,13 +152,6 @@ document.addEventListener("load", function(e) {
 			headerTopHeight + " - " + 
 			headerBasicHeight + " - 75px);"
 		);
-	}
-
-	if (!isEmpty(list)) {
-		if (!mobVersion) for (update = 0; update < 100; update++) {
-			listBgHeight = getValueStyle(".listBg", "height");
-			setStyleEl(list, "height", listBgHeight);
-		}
 	}
 });
 
