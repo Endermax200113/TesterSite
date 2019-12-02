@@ -1,12 +1,19 @@
-var numberTest = 48;
+var numberTest = 49;
 var test = "[Тест №" + numberTest + "] Это тестовый сайт!";
 var update;
 
 var headerBgMainHeight = getValueStyle(".headerBgMain", "height");
 var headerTopHeight = getValueStyle(".headerTop", "height");
 var headerBasicHeight = getValueStyle(".headerBasic", "height");
-
 var headerEmpty = fromElement("#headerEmpty");
+var headerTopImage = fromElement(".headerTopImage");
+var showMainMenu = false;
+var headerBg = fromElement(".headerBg");
+var headerTop = fromElement(".headerTop");
+var headerBasic = fromElement(".headerBasic");
+var headerButtons = fromElement(".headerButtons");
+var headerMenu = fromElement(".headerMenu");
+var headerMenuCrossImage = fromElement(".headerMenuCrossImage");
 
 var content1Blocks = fromElement(".content1Blocks");
 var content1Block = fromClasses(".content1Block");
@@ -77,6 +84,15 @@ window.addEventListener("resize", function(e) {
 		if (!isEmpty(content2BlockMaximized)) setStyleEl(content2, "height", "870px");
 		else setStyleEl(content2, "height", "680px");
 	}
+
+	if (!mobVersion) {
+		showMainMenu = false;
+		setStyleEl(headerBg, "filter", "blur(0px)");
+		setStyleEl(headerTop, "filter", "blur(0px)");
+		setStyleEl(headerBasic, "filter", "blur(0px)");
+		setStyleEl(headerButtons, "filter", "blur(0px)");
+		setStyleEl(headerMenu, "display", "none");
+	}
 });
 
 document.addEventListener("click", function(e) {
@@ -138,6 +154,28 @@ document.addEventListener("click", function(e) {
 		}
 
 		content1PagesHere = fromClasses(".content1PagesHere");
+	} else if (!isEmpty(headerTopImage) &&
+		equalsElements(element, headerTopImage)) {
+
+		if (mobVersion) {
+			showMainMenu = true;
+			setStyleEl(headerBg, "filter", "blur(10px)");
+			setStyleEl(headerTop, "filter", "blur(10px)");
+			setStyleEl(headerBasic, "filter", "blur(10px)");
+			setStyleEl(headerButtons, "filter", "blur(10px)");
+			setStyleEl(headerMenu, "display", "flex");
+		}
+	} else if (!isEmpty(headerMenuCrossImage) &&
+		equalsElements(element, headerMenuCrossImage)) {
+
+		if (mobVersion) {
+			showMainMenu = false;
+			setStyleEl(headerBg, "filter", "blur(0px)");
+			setStyleEl(headerTop, "filter", "blur(0px)");
+			setStyleEl(headerBasic, "filter", "blur(0px)");
+			setStyleEl(headerButtons, "filter", "blur(0px)");
+			setStyleEl(headerMenu, "display", "none");
+		}
 	}
 });
 
