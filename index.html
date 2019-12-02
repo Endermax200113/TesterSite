@@ -12,7 +12,7 @@
 	</head>
 	
 	<body>
-		<header>
+		<header id="main">
 			<div class="headerBg">
 				<img class="headerBgGradient" src="img/@1x/headerBgGradient.png" alt="Градиент на заднем фоне">
 				<img class="headerBgMain" src="img/@1x/headerBg.png" alt="Задний фон на header">
@@ -21,7 +21,7 @@
 			<div class="headerTop">
 				<img src="img/@2x/headerTopMenu.png" alt="Меню" class="headerTopImage">
 				
-				<a class="headerTopLogo" href="#">
+				<a class="headerTopLogo" href="#main">
 					<img src="img/@1x/logo.png" alt="Логотип" class="headerTopLogoImage">
 					PSKOVPAGES
 				</a>
@@ -29,11 +29,11 @@
 				<div class="headerTopMenu">
 					<div class="headerTopMenuSpecial">
 						<div class="headerTopMenuAll">
-							<a class="headerTopMenuButton" href="#">Главная</a>
-							<a class="headerTopMenuButton" href="#">Сервисы</a>
-							<a class="headerTopMenuButton" href="#">Расширение</a>
-							<a class="headerTopMenuButton" href="#">Цены</a>
-							<a class="headerTopMenuButton" href="#">Помощь</a>
+							<a class="headerTopMenuButton" href="#main">Главная</a>
+							<a class="headerTopMenuButton" href="#services">Сервисы</a>
+							<a class="headerTopMenuButton" href="#extension">Расширение</a>
+							<a class="headerTopMenuButton" href="#pricing">Цены</a>
+							<a class="headerTopMenuButton" href="#help">Помощь</a>
 						</div>
 					</div>
 				</div>
@@ -161,7 +161,7 @@
 			</div>
 		</div>
 		
-		<div class="content2">
+		<div class="content2" id="services">
 			<div class="content2Text">
 				<div class="content2TextTitle">Services</div>
 				<div class="content2TextDescription">
@@ -275,18 +275,6 @@
 		<div class="list">
 			<img src="img/@2x/listBg.png" alt="Задний фон на листе" class="listBg">
 			<img src="img/@2x/listGradient.png" alt="Градиент на листе" class="listGradient">
-			
-			<!--<script type="text/javascript">
-				var list = fromElement(".list");
-				var listBgHeight = getValueStyle(".listBg", "height");
-				
-				if (!isEmpty(list)) {
-					if (!mobVersion) for (update = 0; update < 100; update++) {
-						listBgHeight = getValueStyle(".listBg", "height");
-						setStyleEl(list, "height", listBgHeight);
-					}
-				}
-			</script>-->
 
 			<div class="listMain">
 				<div class="listMainText">
@@ -328,7 +316,7 @@
 			</div>
 		</div>
 		
-		<div class="content3">
+		<div class="content3" id="extension">
 			<div class="content3Text">
 				<div class="content3TextTitle">Our Team</div>
 				<div class="content3TextDescription">
@@ -380,7 +368,7 @@
 			</div>
 		</div>
 		
-		<div class="contacts">
+		<div class="contacts" id="pricing">
 			<div class="contactsText">
 				<div class="contactsTextTitle">Contact Us</div>
 				<div class="contactsTextDescription">
@@ -416,22 +404,19 @@
 			</div>
 		</div>
 		
-		<div class="empty"></div>
-		
-		<!--
-		<footer>
+		<footer id="help">
 			<div class="footerMenu">
-				<a href="#" class="footerMenuLeft">
+				<a href="#main" class="footerMenuLeft">
 					<img src="img/@1x/logo.png" alt="Логотип" class="footerMenuLeftImage">
 					<div class="footerMenuLeftText">pskovpages</div>
 				</a>
 
 				<div class="footerMenuRight">
-					<a href="#" class="footerMenuRightButton">Home</a>
-					<a href="#" class="footerMenuRightButton">Service</a>
-					<a href="#" class="footerMenuRightButton">Extension</a>
-					<a href="#" class="footerMenuRightButton">Pricing</a>
-					<a href="#" class="footerMenuRightButton">Help</a>
+					<a href="#main" class="footerMenuRightButton">Home</a>
+					<a href="#services" class="footerMenuRightButton">Service</a>
+					<a href="#extension" class="footerMenuRightButton">Extension</a>
+					<a href="#pricing" class="footerMenuRightButton">Pricing</a>
+					<a href="#help" class="footerMenuRightButton">Help</a>
 				</div>
 			</div>
 			
@@ -467,7 +452,6 @@
 				</div>
 			</div>
 		</footer>
-		-->
 		
 		<script type="text/javascript" src="js/main.js"></script>
 		<script type="text/javascript" src="js/scripts.min.js"></script>		

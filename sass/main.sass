@@ -6,6 +6,9 @@
 	margin: 0px
 	padding: 0px
 
+html
+	transition: all .3s ease
+
 .empty
 	position: relative
 	height: 1000px
@@ -59,10 +62,15 @@ header
 			flex-direction: row
 			justify-content: flex-start
 			align-items: center
+			z-index: 6
+			transition: all .3s ease
 			
 			&Image
 				width: 50px
 				padding-right: 30px
+			
+			&:hover
+				color: #061e37
 
 		&Menu
 			position: absolute
@@ -71,6 +79,7 @@ header
 			justify-content: center
 			align-items: center
 			width: calc(100% - 160px)
+			z-index: 5
 
 			&Special
 				display: flex
