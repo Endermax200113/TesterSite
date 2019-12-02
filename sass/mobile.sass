@@ -449,6 +449,7 @@
 	.content3
 		height: 300px
 		justify-content: space-around
+		padding-bottom: 10px
 		
 		&Text
 			height: 60px
@@ -500,3 +501,77 @@
 
 				&Icon img
 					height: 100%
+
+	.contacts
+		height: 300px
+		
+		&Text
+			height: 60px
+
+			&Title
+				font-size: 25px
+
+			&Description
+				font-size: 10px
+				line-height: 12px
+				width: 275px
+		
+		&Form
+			height: auto
+			width: calc(100% - 20px)
+			padding: 25px 10px 0px 10px
+			
+			&Data
+				height: 60px
+
+				&Field[type="text"], &Field[type="email"], &Field[type="tel"]
+					width: 120px
+					height: 25px
+					border-radius: 3px
+					padding: 0px 10px
+					font-size: 10px
+					line-height: 20px
+
+					&::placeholder
+						font-size: 10px
+						line-height: 20px
+
+			&Message
+				height: 100px
+
+				&Textarea
+					height: 75px
+					border-radius: 3px
+					padding: 5px 10px
+					font-size: 10px
+					line-height: 20px
+
+					&::placeholder
+						font-size: 10px
+
+			&Last
+				&Check
+					&Box
+						font-size: 15px
+
+					&Label
+						font-size: 10px
+						padding-left: 5px
+
+				&Button[type="submit"]
+					width: 65px
+					height: 25px
+					border-radius: 3px
+					font-size: 10px
+					line-height: 15px
+					color: #fff
+					text-transform: uppercase
+					cursor: pointer
+					transition: all .3s ease
+					outline: none
+
+					&:hover
+						background-color: #1bc69b
+
+					&:active
+						background-color: #169676

@@ -1,4 +1,4 @@
-var numberTest = 41;
+var numberTest = 42;
 var test = "[Тест №" + numberTest + "] Это тестовый сайт!";
 var update;
 
@@ -141,7 +141,7 @@ document.addEventListener("click", function(e) {
 	}
 });
 
-document.addEventListener("DOMContentLoaded", function(e) {
+document.addEventListener("load", function(e) {
 	console.log(test);
 
 	if (!isEmpty(headerEmpty)) {
