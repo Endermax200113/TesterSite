@@ -141,7 +141,7 @@ document.addEventListener("click", function(e) {
 	}
 });
 
-document.addEventListener("DOMContentLoaded", function(e) {
+window.addEventListener("load", function(e) {
 	console.log(test);
 
 	if (!isEmpty(headerEmpty)) {
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 	}
 
 	if (!isEmpty(list)) {
-		if (!mobVersion) for (update = 0; update < 100; update++) {
+		if (!mobVersion) {
 			listBgHeight = getValueStyle(".listBg", "height");
 			setStyleEl(list, "height", listBgHeight);
 		}
