@@ -1,4 +1,4 @@
-var numberTest = 51;
+var numberTest = 52;
 var test = "[Тест №" + numberTest + "] Это тестовый сайт!";
 var update;
 
@@ -91,7 +91,7 @@ window.addEventListener("resize", function(e) {
 		setStyleEl(headerTop, "filter", "blur(0px)");
 		setStyleEl(headerBasic, "filter", "blur(0px)");
 		setStyleEl(headerButtons, "filter", "blur(0px)");
-		setStyleEl(headerMenu, "display", "none");
+		headerMenu.style = "opacity: 0; z-index: 0;"
 	}
 });
 
@@ -163,7 +163,7 @@ document.addEventListener("click", function(e) {
 			setStyleEl(headerTop, "filter", "blur(10px)");
 			setStyleEl(headerBasic, "filter", "blur(10px)");
 			setStyleEl(headerButtons, "filter", "blur(10px)");
-			setStyleEl(headerMenu, "display", "flex");
+			headerMenu.style = "opacity: 1; z-index: 5;"
 		}
 	} else if (!isEmpty(headerMenuCrossImage) &&
 		equalsElements(element, headerMenuCrossImage)) {
@@ -174,7 +174,7 @@ document.addEventListener("click", function(e) {
 			setStyleEl(headerTop, "filter", "blur(0px)");
 			setStyleEl(headerBasic, "filter", "blur(0px)");
 			setStyleEl(headerButtons, "filter", "blur(0px)");
-			setStyleEl(headerMenu, "display", "none");
+			headerMenu.style = "opacity: 0; z-index: 0;"
 		}
 	}
 });
