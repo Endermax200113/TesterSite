@@ -163,9 +163,13 @@ body {
         width: 100%; }
 
 .sec1 {
-  position: relative;
-  height: 100%; }
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  position: relative; }
   .sec1-image {
+    display: block;
     width: 100%; }
 
 .content {
