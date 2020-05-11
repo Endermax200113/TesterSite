@@ -77,22 +77,16 @@ body {
       -webkit-align-items: flex-start;
           -ms-flex-align: start;
               align-items: flex-start; }
-      .header-main-design-text, .header-main-contacts-text, .header-links a {
+      .header-main-design-text, .header-main-contacts-text, .header-links-link {
         font-family: "BeauSansPro", sans-serif;
         font-weight: 200;
         font-size: 18px;
-        padding-bottom: 5px;
         text-decoration: none;
         color: #666;
         -webkit-transition: all .3s ease;
         -o-transition: all .3s ease;
-        transition: all .3s ease;
-        border-bottom: 0px solid #e60042; }
-        .header-main-design-text:hover, .header-main-contacts-text:hover, .header-links a:hover {
-          color: #000;
-          border-bottom-width: 5px;
-          padding-bottom: 0px; }
-        .header-main-design-text:active, .header-main-contacts-text:active, .header-links a:active {
+        transition: all .3s ease; }
+        .header-main-design-text:hover, .header-main-contacts-text:hover, .header-links-link:hover {
           color: #000; }
     .header-main-logo {
       width: 100%;
@@ -148,9 +142,23 @@ body {
     -webkit-align-items: flex-end;
         -ms-flex-align: end;
             align-items: flex-end; }
-    .header-links a {
+    .header-links-link {
+      position: relative;
       padding: 0px 23px 5px;
-      font-size: 20px; }
+      font-size: 20px;
+      border-bottom: none; }
+      .header-links-link:before {
+        position: absolute;
+        content: '';
+        left: 0px;
+        height: 100%;
+        width: 0px;
+        border-bottom: 5px solid #e60042;
+        -webkit-transition: width .3s ease;
+        -o-transition: width .3s ease;
+        transition: width .3s ease; }
+      .header-links-link:hover:before {
+        width: 100%; }
 
 .content {
   -webkit-box-flex: 1;
