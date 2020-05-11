@@ -77,18 +77,22 @@ body {
       -webkit-align-items: flex-start;
           -ms-flex-align: start;
               align-items: flex-start; }
-      .header-main-design a {
+      .header-main-design-text, .header-main-contacts-text, .header-links a {
         font-family: "BeauSansPro", sans-serif;
         font-weight: 200;
         font-size: 18px;
+        padding-bottom: 5px;
         text-decoration: none;
         color: #666;
         -webkit-transition: all .3s ease;
         -o-transition: all .3s ease;
-        transition: all .3s ease; }
-        .header-main-design a:hover {
-          color: #444; }
-        .header-main-design a:active {
+        transition: all .3s ease;
+        border-bottom: 0px solid #e60042; }
+        .header-main-design-text:hover, .header-main-contacts-text:hover, .header-links a:hover {
+          color: #000;
+          border-bottom-width: 5px;
+          padding-bottom: 0px; }
+        .header-main-design-text:active, .header-main-contacts-text:active, .header-links a:active {
           color: #000; }
     .header-main-logo {
       width: 100%;
@@ -124,19 +128,6 @@ body {
       -webkit-align-items: center;
           -ms-flex-align: center;
               align-items: center; }
-      .header-main-contacts a {
-        font-family: "BeauSansPro", sans-serif;
-        font-weight: 200;
-        font-size: 18px;
-        text-decoration: none;
-        color: #666;
-        -webkit-transition: all .3s ease;
-        -o-transition: all .3s ease;
-        transition: all .3s ease; }
-        .header-main-contacts a:hover {
-          color: #444; }
-        .header-main-contacts a:active {
-          color: #000; }
   .header-links {
     width: 100%;
     padding: 60px 0px 30px;
@@ -158,19 +149,8 @@ body {
         -ms-flex-align: end;
             align-items: flex-end; }
     .header-links a {
-      font-family: "BeauSansPro", sans-serif;
-      font-weight: 200;
-      font-size: 20px;
-      padding: 0px 23px;
-      text-decoration: none;
-      color: #666;
-      -webkit-transition: all .3s ease;
-      -o-transition: all .3s ease;
-      transition: all .3s ease; }
-      .header-links a:hover {
-        color: #444; }
-      .header-links a:active {
-        color: #000; }
+      padding: 0px 23px 5px;
+      font-size: 20px; }
 
 .content {
   -webkit-box-flex: 1;
