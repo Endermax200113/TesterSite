@@ -46,7 +46,7 @@ body {
           flex-direction: column; }
   .header-main {
     width: 100%;
-    height: 165px;
+    padding-top: 60px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -65,8 +65,6 @@ body {
             align-items: center; }
     .header-main-design {
       width: 100%;
-      height: 75px;
-      padding-top: 90px;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -95,7 +93,6 @@ body {
     .header-main-logo {
       width: 100%;
       height: 105px;
-      padding-top: 60px;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -110,8 +107,6 @@ body {
               align-items: flex-start; }
     .header-main-contacts {
       width: 100%;
-      height: 75px;
-      padding-top: 75px;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -144,8 +139,7 @@ body {
           color: #000; }
   .header-links {
     width: 100%;
-    height: 100%;
-    padding-bottom: 26px;
+    padding: 60px 0px 30px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
