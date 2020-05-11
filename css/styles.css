@@ -153,10 +153,10 @@ body {
         left: 0px;
         height: 100%;
         width: 0px;
-        border-bottom: 5px solid #e60042;
-        -webkit-transition: width .3s ease;
-        -o-transition: width .3s ease;
-        transition: width .3s ease; }
+        border-bottom: 3px solid #000;
+        -webkit-transition: width .3s ease-out;
+        -o-transition: width .3s ease-out;
+        transition: width .3s ease-out; }
       .header-links-link:hover:before {
         width: 100%; }
 
