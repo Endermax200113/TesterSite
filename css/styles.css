@@ -217,9 +217,10 @@ body {
   -webkit-flex: 1 0 auto;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
-  width: 100%;
-  height: 1000px;
-  background-color: #0fa; }
+  position: relative; }
+  .sec2-image {
+    display: block;
+    width: 100%; }
 
 .footer {
   -webkit-box-flex: 0;
