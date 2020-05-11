@@ -145,6 +145,7 @@ body {
     .header-links-link {
       position: relative;
       padding: 0px 23px 5px;
+      margin: 0px 20px;
       font-size: 20px;
       border-bottom: none; }
       .header-links-link:before {
