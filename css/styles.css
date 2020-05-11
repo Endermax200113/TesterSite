@@ -154,7 +154,7 @@ body {
         left: 0px;
         height: 100%;
         width: 0px;
-        border-bottom: 3px solid #000;
+        border-bottom: 3px solid rgba(22, 22, 22, 0.55);
         -webkit-transition: width .15s ease-out;
         -o-transition: width .15s ease-out;
         transition: width .15s ease-out; }
