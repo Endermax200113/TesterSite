@@ -25,7 +25,7 @@ function testFunction() {
 
 //Главный скрипт
 
-var version = "0.0.9";
+var version = "0.0.10";
 var copyrite = "© PskovPages";
 
 $(document).ready(() => {
