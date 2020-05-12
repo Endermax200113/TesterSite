@@ -227,14 +227,7 @@ body {
   .sec2-image {
     display: block;
     width: 100%; }
-
-.sec3 {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
-  position: relative; }
-  .sec3-title, .sec4-title {
+  .sec2-title, .sec3-title, .sec4-title {
     width: 100%;
     height: 270px;
     font-family: "Muller", sans-serif;
@@ -252,6 +245,16 @@ body {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
+    .sec2-title-link {
+      color: #000;
+      text-decoration: none; }
+
+.sec3 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  position: relative; }
   .sec3-image, .sec4-image {
     display: block;
     width: 100%;
