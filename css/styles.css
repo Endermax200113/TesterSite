@@ -303,6 +303,7 @@ a {
     height: 285px; }
   .sec4-blocks {
     width: 938px;
+    margin-bottom: 125px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
