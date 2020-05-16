@@ -53,7 +53,7 @@ icon.on("click", (e) => {
 		btn.addClass("header-main-mob-menu-image");
 		btn.removeClass('header-main-mob-menu-image-active');
 		menu.css("opacity", "0");
-		setTimeout(zIndex, 150);
+		setTimeout(zIndex, 300);
 		
 		actived = false;
 	}
