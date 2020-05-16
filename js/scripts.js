@@ -32,3 +32,33 @@ $(document).ready(() => {
 	console.log("Версия сайта: " + version);
 	console.log(copyrite);
 });
+
+
+//Меню
+
+var icon = $(".header-main-mob-menu");
+var menu = $(".header-menu");
+var btn = $(".header-main-mob-menu-image");
+var actived = false;
+
+icon.on("click", (e) => {
+	if (!actived) {
+		btn.addClass('header-main-mob-menu-image-active');
+		btn.removeClass("header-main-mob-menu-image");
+		menu.css("opacity", "1");
+		menu.css("z-index", "20");
+
+		actived = true;
+	} else {
+		btn.addClass("header-main-mob-menu-image");
+		btn.removeClass('header-main-mob-menu-image-active');
+		menu.css("opacity", "0");
+		setTimeout(zIndex, 150);
+		
+		actived = false;
+	}
+});
+
+function zIndex() {
+	menu.css("z-index", "-1");
+}
