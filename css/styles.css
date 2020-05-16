@@ -721,4 +721,6 @@ a {
     .header-menu-link {
       font-family: "BeauSansPro", sans-serif;
       font-size: 20px;
-      color: #fff; } }
+      color: #fff; }
+      .header-menu-link:active {
+        text-decoration: line-through; } }
