@@ -17,7 +17,7 @@
 		<header class="header">
 			<div class="header-menu">
 				<!-- ПУСТЫЕ ССЫЛКИ -->
-				<a href="#" class="header-menu-link">Портфолио</a>
+				<a href="#" class="header-menu-link-here">Портфолио</a>
 				<a href="#" class="header-menu-link">Услуги</a>
 				<a href="#" class="header-menu-link">Контакты</a>
 			</div>
@@ -34,10 +34,12 @@
 
 						<div class="header-main-logo">
 							<a href="/">
-								<object data="img/logo.svg" type="image/svg+xml" class="header-main-logo-image">
+								<!-- <object data="img/logo.svg" type="image/svg+xml" class="header-main-logo-image"> -->
 									<!-- <img src="img/logo.png" alt="Логотип" class="header-main-logo-image"> -->
-								</object>
-								
+								<!-- </object> -->
+								<svg>
+									<use xlink:href="img/logo.svg#svg-logo" class="header-main-logo-image"></use>
+								</svg>
 							</a>
 						</div>
 
@@ -55,7 +57,7 @@
 
 			<div class="header-links">
 				<!-- ПУСТЫЕ ССЫЛКИ -->
-				<a href="#" class="header-links-link">Портфолио</a>
+				<a href="#" class="header-links-link-here">Портфолио</a>
 				<a href="#" class="header-links-link">Услуги</a>
 				<a href="#" class="header-links-link">Контакты</a>
 			</div>
