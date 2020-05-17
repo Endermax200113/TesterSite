@@ -43,6 +43,9 @@ var logo = $(".header-main-logo-image");
 var panel = $(".header-main-mob");
 var design = $(".header-main-design-text");
 var animate = $(".header-main-mob-menu-animate");
+var link1 = $(".link-one");
+var link2 = $(".link-two");
+var link3 = $(".link-three");
 var actived = false;
 
 icon.on("click", (e) => {
@@ -55,6 +58,9 @@ icon.on("click", (e) => {
 		logo.css("fill", "#fff");
 		design.css("color", "#fff");
 		animate.css("transform", "scale(1)");
+		link1.css('opacity', '1');
+		link2.css('opacity', '1');
+		link3.css('opacity', '1');
 
 		actived = true;
 	} else {
@@ -65,6 +71,9 @@ icon.on("click", (e) => {
 		logo.css("fill", "#000");
 		design.css("color", "#000")
 		animate.css("transform", "scale(0)");
+		link1.css('opacity', '0');
+		link2.css('opacity', '0');
+		link3.css('opacity', '0');
 		setTimeout(zIndex, 300);
 		
 		actived = false;

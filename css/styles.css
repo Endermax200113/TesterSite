@@ -757,7 +757,23 @@ a {
     .header-menu-link, .header-menu-link-here {
       font-family: "BeauSansPro", sans-serif;
       font-size: 30px;
+      font-weight: 600;
       margin: 25px 0px;
       color: #fff; }
       .header-menu-link-here {
-        text-decoration: line-through; } }
+        text-decoration: line-through; }
+  .link-one {
+    opacity: 0;
+    -webkit-transition: opacity .3s ease .1s;
+    -o-transition: opacity .3s ease .1s;
+    transition: opacity .3s ease .1s; }
+  .link-two {
+    opacity: 0;
+    -webkit-transition: opacity .3s ease .2s;
+    -o-transition: opacity .3s ease .2s;
+    transition: opacity .3s ease .2s; }
+  .link-three {
+    opacity: 0;
+    -webkit-transition: opacity .3s ease .3s;
+    -o-transition: opacity .3s ease .3s;
+    transition: opacity .3s ease .3s; } }
