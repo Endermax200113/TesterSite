@@ -735,9 +735,15 @@ a {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-transition: opacity .3s ease;
-    -o-transition: opacity .3s ease;
-    transition: opacity .3s ease;
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+    border-radius: 50%;
+    -webkit-transition: opacity .3s ease, -webkit-transform .3s ease .3s;
+    transition: opacity .3s ease, -webkit-transform .3s ease .3s;
+    -o-transition: opacity .3s ease, transform .3s ease .3s;
+    transition: opacity .3s ease, transform .3s ease .3s;
+    transition: opacity .3s ease, transform .3s ease .3s, -webkit-transform .3s ease .3s;
     z-index: -1; }
     .header-menu-link, .header-menu-link-here {
       font-family: "BeauSansPro", sans-serif;

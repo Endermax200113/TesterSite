@@ -51,6 +51,7 @@ icon.on("click", (e) => {
 		btn.css("position", "fixed");
 		menu.css("opacity", "1");
 		menu.css("z-index", "20");
+		menu.css("transform", "scale(1)");
 		logo.css("fill", "#fff");
 		design.css("color", "#fff");
 
@@ -60,6 +61,7 @@ icon.on("click", (e) => {
 		btn.removeClass('header-main-mob-menu-image-active');
 		btn.css("position", "relative");
 		menu.css("opacity", "0");
+		menu.css("transform", "scale(0)");
 		logo.css("fill", "#000");
 		design.css("color", "#000")
 		setTimeout(zIndex, 300);
