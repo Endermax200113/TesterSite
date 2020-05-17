@@ -25,7 +25,7 @@ function testFunction() {
 
 //Главный скрипт
 
-var version = "0.0.15";
+var version = "0.0.16";
 var copyrite = "© PskovPages";
 
 $(document).ready(() => {
@@ -45,6 +45,7 @@ icon.on("click", (e) => {
 	if (!actived) {
 		btn.addClass('header-main-mob-menu-image-active');
 		btn.removeClass("header-main-mob-menu-image");
+		btn.css("position", "fixed");
 		menu.css("opacity", "1");
 		menu.css("z-index", "20");
 
@@ -52,6 +53,7 @@ icon.on("click", (e) => {
 	} else {
 		btn.addClass("header-main-mob-menu-image");
 		btn.removeClass('header-main-mob-menu-image-active');
+		btn.css("position", "relative");
 		menu.css("opacity", "0");
 		setTimeout(zIndex, 300);
 		
