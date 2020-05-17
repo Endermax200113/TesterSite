@@ -698,6 +698,21 @@ a {
               -o-transition: top 0.3s linear, background-color 0.3s ease, transform 0.3s ease 0.3s;
               transition: top 0.3s linear, background-color 0.3s ease, transform 0.3s ease 0.3s;
               transition: top 0.3s linear, background-color 0.3s ease, transform 0.3s ease 0.3s, -webkit-transform 0.3s ease 0.3s; }
+        .header-main-mob-menu-animate {
+          position: fixed;
+          width: 200vh;
+          height: 200vh;
+          border-radius: 50%;
+          -webkit-transform: translate(50%, 50%) scale(0);
+              -ms-transform: translate(50%, 50%) scale(0);
+                  transform: translate(50%, 50%) scale(0);
+          background-color: #0008;
+          -webkit-transition: -webkit-transform .3s ease;
+          transition: -webkit-transform .3s ease;
+          -o-transition: transform .3s ease;
+          transition: transform .3s ease;
+          transition: transform .3s ease, -webkit-transform .3s ease;
+          z-index: 0; }
       .header-main-mob-logo {
         -webkit-box-orient: vertical;
         -webkit-box-direction: reverse;
@@ -735,15 +750,9 @@ a {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-transform: scale(0);
-        -ms-transform: scale(0);
-            transform: scale(0);
-    border-radius: 50%;
-    -webkit-transition: opacity .3s ease, -webkit-transform .3s ease .3s;
-    transition: opacity .3s ease, -webkit-transform .3s ease .3s;
-    -o-transition: opacity .3s ease, transform .3s ease .3s;
-    transition: opacity .3s ease, transform .3s ease .3s;
-    transition: opacity .3s ease, transform .3s ease .3s, -webkit-transform .3s ease .3s;
+    -webkit-transition: opacity .3s ease;
+    -o-transition: opacity .3s ease;
+    transition: opacity .3s ease;
     z-index: -1; }
     .header-menu-link, .header-menu-link-here {
       font-family: "BeauSansPro", sans-serif;
