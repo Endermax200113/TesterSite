@@ -783,7 +783,14 @@ a {
     font-size: 15px; }
   .sec2-title, .sec3-title, .sec4-title {
     height: 60px;
-    font-size: 22px; } }
+    font-size: 22px; }
+  .sec4-blocks {
+    width: 300px;
+    margin-bottom: 40px; }
+    .sec4-blocks-block {
+      width: 300px;
+      height: 300px;
+      margin-bottom: 30px; } }
 
 @media only screen and (max-width: 320px) {
   .sec1-text {
@@ -791,4 +798,11 @@ a {
     width: auto;
     font-size: 13px; }
   .sec2-title, .sec3-title, .sec4-title {
-    font-size: 20px; } }
+    font-size: 20px; }
+  .sec4-blocks {
+    width: 280px;
+    margin-bottom: 30px; }
+    .sec4-blocks-block {
+      width: 280px;
+      height: 280px;
+      margin-bottom: 20px; } }
