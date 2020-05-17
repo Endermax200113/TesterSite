@@ -577,7 +577,7 @@ a {
               -ms-flex-align: center;
                   align-items: center; }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 425px) {
   .header-main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
