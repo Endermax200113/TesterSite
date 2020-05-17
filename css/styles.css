@@ -754,14 +754,12 @@ a {
     -o-transition: opacity .3s ease;
     transition: opacity .3s ease;
     z-index: -1; }
-    .header-menu-link, .header-menu-link-here {
+    .header-menu-link {
       font-family: "BeauSansPro", sans-serif;
       font-size: 30px;
       font-weight: 600;
       margin: 25px 0px;
       color: #fff; }
-      .header-menu-link-here {
-        text-decoration: line-through; }
   .link-one {
     opacity: 0;
     -webkit-transition: opacity .3s ease .1s;
@@ -776,4 +774,14 @@ a {
     opacity: 0;
     -webkit-transition: opacity .3s ease .3s;
     -o-transition: opacity .3s ease .3s;
-    transition: opacity .3s ease .3s; } }
+    transition: opacity .3s ease .3s; }
+  .sec1-text {
+    padding-left: 10px;
+    width: auto;
+    font-size: 15px; } }
+
+@media only screen and (max-width: 320px) {
+  .sec1-text {
+    padding-left: 5px;
+    width: auto;
+    font-size: 13px; } }
