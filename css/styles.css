@@ -134,10 +134,23 @@ a {
         .header-main-design-text:hover, .header-main-contacts-text:hover, .header-links-link:hover {
           color: #000; }
     .header-main-logo {
-      width: 302px;
-      display: block; }
+      width: 100%;
+      height: 101px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
       .header-main-logo-image {
-        width: 100%; }
+        width: 302px;
+        height: 101px; }
     .header-main-contacts {
       width: 100%;
       display: -webkit-box;
