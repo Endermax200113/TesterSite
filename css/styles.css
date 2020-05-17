@@ -260,7 +260,7 @@ a {
     width: 600px;
     letter-spacing: 1.5px;
     color: #fff;
-    z-index: 10; }
+    z-index: 1; }
   .sec1-link {
     position: relative;
     display: -webkit-box;
@@ -578,46 +578,172 @@ a {
                   align-items: center; }
 
 @media only screen and (max-width: 425px) {
-  .header-main {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -webkit-flex-direction: column-reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    padding: 0px; }
-    .header-main-design {
-      padding: 0px;
-      margin-top: 5px;
-      opacity: .7;
-      z-index: 21; }
-      .header-main-design-text, .header-main-contacts-text, .header-links-link, .header-links-link-here {
-        font-size: 0.85em;
-        font-style: italic;
-        -webkit-transition: color .3s ease;
-        -o-transition: color .3s ease;
-        transition: color .3s ease; }
-    .header-main-logo {
-      margin-top: 20px;
-      height: 50.5px; }
-      .header-main-logo-image {
-        max-width: 151px;
-        max-height: 50.5px; }
-    .header-main-contacts {
-      display: none;
-      padding: 10px 0px;
-      margin-bottom: 20px;
-      margin-top: 10px; }
-      .header-main-contacts-text {
-        font-size: 0.85em; }
-    .header-main-mob {
+  .header {
+    max-height: 95px; }
+    .header-main {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -webkit-flex-direction: column-reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse;
+      padding: 0px; }
+      .header-main-design {
+        padding: 0px;
+        margin-top: 5px;
+        opacity: .7;
+        z-index: 21; }
+        .header-main-design-text, .header-main-contacts-text, .header-links-link, .header-links-link-here {
+          font-size: 0.85em;
+          font-style: italic;
+          -webkit-transition: color .3s ease;
+          -o-transition: color .3s ease;
+          transition: color .3s ease; }
+      .header-main-logo {
+        margin-top: 20px;
+        height: 50.5px; }
+        .header-main-logo-image {
+          max-width: 151px;
+          max-height: 50.5px; }
+      .header-main-contacts {
+        display: none;
+        padding: 10px 0px;
+        margin-bottom: 20px;
+        margin-top: 10px; }
+        .header-main-contacts-text {
+          font-size: 0.85em; }
+      .header-main-mob {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: row;
+        -webkit-justify-content: row;
+            -ms-flex-pack: row;
+                justify-content: row;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center; }
+        .header-main-mob-menu {
+          position: relative;
+          min-width: 30px;
+          height: 30px;
+          margin-right: 15px;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center; }
+          .header-main-mob-menu-image, .header-main-mob-menu-image-active {
+            position: relative;
+            width: 30px;
+            height: 3px;
+            background-color: #000;
+            -webkit-transition: background-color 0s ease 0.3s;
+            -o-transition: background-color 0s ease 0.3s;
+            transition: background-color 0s ease 0.3s;
+            z-index: 23; }
+            .header-main-mob-menu-image::before, .header-main-mob-menu-image::after, .header-main-mob-menu-image-active::after, .header-main-mob-menu-image-active::before {
+              position: absolute;
+              content: '';
+              top: -10px;
+              width: 30px;
+              height: 3px;
+              background-color: #000;
+              -webkit-transition: background-color 0.3s ease, top 0.3s linear 0.3s, -webkit-transform 0.3s ease;
+              transition: background-color 0.3s ease, top 0.3s linear 0.3s, -webkit-transform 0.3s ease;
+              -o-transition: transform 0.3s ease, background-color 0.3s ease, top 0.3s linear 0.3s;
+              transition: transform 0.3s ease, background-color 0.3s ease, top 0.3s linear 0.3s;
+              transition: transform 0.3s ease, background-color 0.3s ease, top 0.3s linear 0.3s, -webkit-transform 0.3s ease; }
+            .header-main-mob-menu-image::after, .header-main-mob-menu-image-active::after {
+              top: 10px;
+              -webkit-transition: background-color 0.3s ease, top 0.3s linear 0.3s, -webkit-transform 0.3s ease;
+              transition: background-color 0.3s ease, top 0.3s linear 0.3s, -webkit-transform 0.3s ease;
+              -o-transition: transform 0.3s ease, background-color 0.3s ease, top 0.3s linear 0.3s;
+              transition: transform 0.3s ease, background-color 0.3s ease, top 0.3s linear 0.3s;
+              transition: transform 0.3s ease, background-color 0.3s ease, top 0.3s linear 0.3s, -webkit-transform 0.3s ease; }
+            .header-main-mob-menu-image-active {
+              background-color: transparent;
+              -webkit-transition: background-color 0s ease 0.3s;
+              -o-transition: background-color 0s ease 0.3s;
+              transition: background-color 0s ease 0.3s; }
+              .header-main-mob-menu-image-active::before {
+                background-color: #fff;
+                -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                top: 0px;
+                -webkit-transition: top 0.3s linear, background-color 0.3s ease, -webkit-transform 0.3s ease 0.3s;
+                transition: top 0.3s linear, background-color 0.3s ease, -webkit-transform 0.3s ease 0.3s;
+                -o-transition: top 0.3s linear, background-color 0.3s ease, transform 0.3s ease 0.3s;
+                transition: top 0.3s linear, background-color 0.3s ease, transform 0.3s ease 0.3s;
+                transition: top 0.3s linear, background-color 0.3s ease, transform 0.3s ease 0.3s, -webkit-transform 0.3s ease 0.3s; }
+              .header-main-mob-menu-image-active::after {
+                background-color: #fff;
+                -webkit-transform: rotate(-45deg);
+                    -ms-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+                top: 0px;
+                -webkit-transition: top 0.3s linear, background-color 0.3s ease, -webkit-transform 0.3s ease 0.3s;
+                transition: top 0.3s linear, background-color 0.3s ease, -webkit-transform 0.3s ease 0.3s;
+                -o-transition: top 0.3s linear, background-color 0.3s ease, transform 0.3s ease 0.3s;
+                transition: top 0.3s linear, background-color 0.3s ease, transform 0.3s ease 0.3s;
+                transition: top 0.3s linear, background-color 0.3s ease, transform 0.3s ease 0.3s, -webkit-transform 0.3s ease 0.3s; }
+          .header-main-mob-menu-animate {
+            position: fixed;
+            width: 250vh;
+            height: 250vh;
+            border-radius: 50%;
+            -webkit-transform: scale(0);
+                -ms-transform: scale(0);
+                    transform: scale(0);
+            background-color: #1a1a1a;
+            -webkit-transition: -webkit-transform .3s ease-out;
+            transition: -webkit-transform .3s ease-out;
+            -o-transition: transform .3s ease-out;
+            transition: transform .3s ease-out;
+            transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+            z-index: 10; }
+        .header-main-mob-logo {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: reverse;
+          -webkit-flex-direction: column-reverse;
+              -ms-flex-direction: column-reverse;
+                  flex-direction: column-reverse;
+          padding: 0px;
+          z-index: 23; }
+        .header-main-mob-empty {
+          width: 30px;
+          padding-left: 15px; }
+    .header-links {
+      display: none; }
+    .header-menu {
+      position: fixed;
+      width: 100%;
+      height: calc(100% - 6px);
+      border-bottom: 3px solid #fff;
+      border-top: 3px solid #fff;
+      opacity: 0;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: row;
-      -webkit-justify-content: row;
-          -ms-flex-pack: row;
-              justify-content: row;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
       -webkit-box-align: center;
       -webkit-align-items: center;
           -ms-flex-align: center;
@@ -625,141 +751,17 @@ a {
       -webkit-box-pack: center;
       -webkit-justify-content: center;
           -ms-flex-pack: center;
-              justify-content: center; }
-      .header-main-mob-menu {
-        position: relative;
-        min-width: 30px;
-        height: 30px;
-        margin-right: 15px;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-            -ms-flex-align: center;
-                align-items: center; }
-        .header-main-mob-menu-image, .header-main-mob-menu-image-active {
-          position: relative;
-          width: 30px;
-          height: 3px;
-          background-color: #000;
-          -webkit-transition: background-color 0s ease 0.3s;
-          -o-transition: background-color 0s ease 0.3s;
-          transition: background-color 0s ease 0.3s;
-          z-index: 23; }
-          .header-main-mob-menu-image::before, .header-main-mob-menu-image::after, .header-main-mob-menu-image-active::after, .header-main-mob-menu-image-active::before {
-            position: absolute;
-            content: '';
-            top: -10px;
-            width: 30px;
-            height: 3px;
-            background-color: #000;
-            -webkit-transition: background-color 0.3s ease, top 0.3s linear 0.3s, -webkit-transform 0.3s ease;
-            transition: background-color 0.3s ease, top 0.3s linear 0.3s, -webkit-transform 0.3s ease;
-            -o-transition: transform 0.3s ease, background-color 0.3s ease, top 0.3s linear 0.3s;
-            transition: transform 0.3s ease, background-color 0.3s ease, top 0.3s linear 0.3s;
-            transition: transform 0.3s ease, background-color 0.3s ease, top 0.3s linear 0.3s, -webkit-transform 0.3s ease; }
-          .header-main-mob-menu-image::after, .header-main-mob-menu-image-active::after {
-            top: 10px;
-            -webkit-transition: background-color 0.3s ease, top 0.3s linear 0.3s, -webkit-transform 0.3s ease;
-            transition: background-color 0.3s ease, top 0.3s linear 0.3s, -webkit-transform 0.3s ease;
-            -o-transition: transform 0.3s ease, background-color 0.3s ease, top 0.3s linear 0.3s;
-            transition: transform 0.3s ease, background-color 0.3s ease, top 0.3s linear 0.3s;
-            transition: transform 0.3s ease, background-color 0.3s ease, top 0.3s linear 0.3s, -webkit-transform 0.3s ease; }
-          .header-main-mob-menu-image-active {
-            background-color: transparent;
-            -webkit-transition: background-color 0s ease 0.3s;
-            -o-transition: background-color 0s ease 0.3s;
-            transition: background-color 0s ease 0.3s; }
-            .header-main-mob-menu-image-active::before {
-              background-color: #fff;
-              -webkit-transform: rotate(45deg);
-                  -ms-transform: rotate(45deg);
-                      transform: rotate(45deg);
-              top: 0px;
-              -webkit-transition: top 0.3s linear, background-color 0.3s ease, -webkit-transform 0.3s ease 0.3s;
-              transition: top 0.3s linear, background-color 0.3s ease, -webkit-transform 0.3s ease 0.3s;
-              -o-transition: top 0.3s linear, background-color 0.3s ease, transform 0.3s ease 0.3s;
-              transition: top 0.3s linear, background-color 0.3s ease, transform 0.3s ease 0.3s;
-              transition: top 0.3s linear, background-color 0.3s ease, transform 0.3s ease 0.3s, -webkit-transform 0.3s ease 0.3s; }
-            .header-main-mob-menu-image-active::after {
-              background-color: #fff;
-              -webkit-transform: rotate(-45deg);
-                  -ms-transform: rotate(-45deg);
-                      transform: rotate(-45deg);
-              top: 0px;
-              -webkit-transition: top 0.3s linear, background-color 0.3s ease, -webkit-transform 0.3s ease 0.3s;
-              transition: top 0.3s linear, background-color 0.3s ease, -webkit-transform 0.3s ease 0.3s;
-              -o-transition: top 0.3s linear, background-color 0.3s ease, transform 0.3s ease 0.3s;
-              transition: top 0.3s linear, background-color 0.3s ease, transform 0.3s ease 0.3s;
-              transition: top 0.3s linear, background-color 0.3s ease, transform 0.3s ease 0.3s, -webkit-transform 0.3s ease 0.3s; }
-        .header-main-mob-menu-animate {
-          position: fixed;
-          width: 250vh;
-          height: 250vh;
-          border-radius: 50%;
-          -webkit-transform: scale(0);
-              -ms-transform: scale(0);
-                  transform: scale(0);
-          background-color: #1a1a1a;
-          -webkit-transition: -webkit-transform .3s ease-out;
-          transition: -webkit-transform .3s ease-out;
-          -o-transition: transform .3s ease-out;
-          transition: transform .3s ease-out;
-          transition: transform .3s ease-out, -webkit-transform .3s ease-out;
-          z-index: 0; }
-      .header-main-mob-logo {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
-        -webkit-flex-direction: column-reverse;
-            -ms-flex-direction: column-reverse;
-                flex-direction: column-reverse;
-        padding: 0px;
-        z-index: 23; }
-      .header-main-mob-empty {
-        width: 30px;
-        padding-left: 15px; }
-  .header-links {
-    display: none; }
-  .header-menu {
-    position: fixed;
-    width: 100%;
-    height: calc(100% - 6px);
-    border-bottom: 3px solid #fff;
-    border-top: 3px solid #fff;
-    opacity: 0;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-transition: opacity .3s ease;
-    -o-transition: opacity .3s ease;
-    transition: opacity .3s ease;
-    z-index: -1; }
-    .header-menu-link {
-      font-family: "BeauSansPro", sans-serif;
-      font-size: 30px;
-      font-weight: 600;
-      margin: 25px 0px;
-      color: #fff; }
+              justify-content: center;
+      -webkit-transition: opacity .3s ease;
+      -o-transition: opacity .3s ease;
+      transition: opacity .3s ease;
+      z-index: -1; }
+      .header-menu-link {
+        font-family: "BeauSansPro", sans-serif;
+        font-size: 30px;
+        font-weight: 600;
+        margin: 25px 0px;
+        color: #fff; }
   .link-one {
     opacity: 0;
     -webkit-transition: opacity .3s ease .1s;
@@ -778,10 +780,15 @@ a {
   .sec1-text {
     padding-left: 10px;
     width: auto;
-    font-size: 15px; } }
+    font-size: 15px; }
+  .sec2-title, .sec3-title, .sec4-title {
+    height: 60px;
+    font-size: 22px; } }
 
 @media only screen and (max-width: 320px) {
   .sec1-text {
     padding-left: 5px;
     width: auto;
-    font-size: 13px; } }
+    font-size: 13px; }
+  .sec2-title, .sec3-title, .sec4-title {
+    font-size: 20px; } }
