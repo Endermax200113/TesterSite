@@ -40,6 +40,7 @@ var icon = $(".header-main-mob-menu");
 var menu = $(".header-menu");
 var btn = $(".header-main-mob-menu-image");
 var logo = $(".header-main-logo-image");
+var panel = $(".header-main-mob");
 var actived = false;
 
 icon.on("click", (e) => {
@@ -49,7 +50,7 @@ icon.on("click", (e) => {
 		btn.css("position", "fixed");
 		menu.css("opacity", "1");
 		menu.css("z-index", "20");
-		logo.css("fill", "#f00");
+		logo.css("fill", "#fff");
 
 		actived = true;
 	} else {

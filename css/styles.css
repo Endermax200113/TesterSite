@@ -152,7 +152,10 @@ a {
       .header-main-logo-image {
         width: 302px;
         height: 101px;
-        fill: #000; }
+        fill: #000;
+        -webkit-transition: fill .3s ease;
+        -o-transition: fill .3s ease;
+        transition: fill .3s ease; }
     .header-main-contacts {
       width: 100%;
       display: -webkit-box;
@@ -598,9 +601,6 @@ a {
       .header-main-logo-image {
         max-width: 151px;
         max-height: 50.5px; }
-        .header-main-logo-image#svg-logo {
-          width: 151px;
-          height: 50.5px; }
     .header-main-contacts {
       display: none;
       padding: 10px 0px;
