@@ -51,7 +51,7 @@ icon.on("click", (e) => {
 		btn.removeClass("header-main-mob-menu-image");
 		btn.css("position", "fixed");
 		menu.css("opacity", "1");
-		menu.css("z-index", "20");
+		menu.css("z-index", "22");
 		logo.css("fill", "#fff");
 		design.css("color", "#fff");
 		animate.css("transform", "scale(1)");
