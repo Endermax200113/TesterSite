@@ -41,6 +41,7 @@ var menu = $(".header-menu");
 var btn = $(".header-main-mob-menu-image");
 var logo = $(".header-main-logo-image");
 var panel = $(".header-main-mob");
+var design = $(".header-main-design-text");
 var actived = false;
 
 icon.on("click", (e) => {
@@ -51,6 +52,7 @@ icon.on("click", (e) => {
 		menu.css("opacity", "1");
 		menu.css("z-index", "20");
 		logo.css("fill", "#fff");
+		design.css("color", "#fff");
 
 		actived = true;
 	} else {
@@ -59,6 +61,7 @@ icon.on("click", (e) => {
 		btn.css("position", "relative");
 		menu.css("opacity", "0");
 		logo.css("fill", "#000");
+		design.css("color", "#000")
 		setTimeout(zIndex, 300);
 		
 		actived = false;
