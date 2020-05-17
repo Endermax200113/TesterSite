@@ -707,11 +707,11 @@ a {
               -ms-transform: scale(0);
                   transform: scale(0);
           background-color: #000;
-          -webkit-transition: -webkit-transform .3s ease;
-          transition: -webkit-transform .3s ease;
-          -o-transition: transform .3s ease;
-          transition: transform .3s ease;
-          transition: transform .3s ease, -webkit-transform .3s ease;
+          -webkit-transition: -webkit-transform .3s ease-out;
+          transition: -webkit-transform .3s ease-out;
+          -o-transition: transform .3s ease-out;
+          transition: transform .3s ease-out;
+          transition: transform .3s ease-out, -webkit-transform .3s ease-out;
           z-index: 0; }
       .header-main-mob-logo {
         -webkit-box-orient: vertical;
