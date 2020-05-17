@@ -81,5 +81,5 @@ icon.on("click", (e) => {
 });
 
 function zIndex() {
-	menu.css("z-index", "-1");
+	if (!actived) menu.css("z-index", "-1");
 }
