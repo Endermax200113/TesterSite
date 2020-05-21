@@ -123,8 +123,6 @@ $(window).resize((e) => {
 });
 
 $(window).scroll((e) => {
-	console.log($(window).scrollTop());
-
 	if ($(window).scrollTop() > getScrollPx()) {
 		links.addClass('fixed-show');
 		links.removeClass('fixed');
