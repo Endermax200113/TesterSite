@@ -18,9 +18,16 @@
 			<div class="sec5-left">
 				<!-- ПУСТОЕ ДЕЙСТВИЕ -->
 				<form class="sec5-left-load" method="POST" action="">
-					<div class="sec5-left-load-label">Загрузите все необходимые файлы</div>
-					<input type="file" id="loadNeed" class="input-file">
-					<label for="load" class="sec5-left-load-btn">Обзор</label>
+					<div class="sec5-left-load-label">Загрузите главную картинку</div>
+					<input type="file" id="loadMain" class="input-file">
+					<label for="loadMain" class="sec5-left-load-btn">Обзор</label>
+				</form>
+				
+				<!-- ПУСТОЕ ДЕЙСТВИЕ -->
+				<form class="sec5-left-load" method="POST" action="">
+					<div class="sec5-left-load-label">Загрузите миниатюру</div>
+					<input type="file" id="loadMini" class="input-file">
+					<label for="loadMini" class="sec5-left-load-btn">Обзор</label>
 				</form>
 			</div>
 
@@ -29,19 +36,17 @@
 					<div class="sec5-right-blocks-title">Загруженные файлы</div>
 
 					<div class="sec5-right-blocks-sketch">
-						<!-- ПУСТОЕ ДЕЙСТВИЕ И ПУСТОЕ ИЗОБРАЖЕНИЕ -->
-						<form class="sec5-right-blocks-sketch-type" method="POST" action="">
-							<input type="file" id="loadMain" class="input-file">
+						<!-- ПУСТОЕ ИЗОБРАЖЕНИЕ -->
+						<div class="sec5-right-blocks-sketch-type">
 							<img src="" alt="" class="sec5-right-blocks-sketch-type-image">
-							<label for="loadMain" class="sec5-right-blocks-sketch-type-label">Главная</label>
-						</form>
+							<div class="sec5-right-blocks-sketch-type-label">Главная</div>
+						</div>
 
-						<!-- ПУСТОЕ ДЕЙСТВИЕ И ПУСТОЕ ИЗОБРАЖЕНИЕ -->
-						<form class="sec5-right-blocks-sketch-type" method="POST" action="">
-							<input type="file" id="loadMini" class="input-file">
+						<!-- ПУСТОЕ ИЗОБРАЖЕНИЕ -->
+						<div class="sec5-right-blocks-sketch-type">
 							<img src="" alt="" class="sec5-right-blocks-sketch-type-image">
-							<label for="loadMini" class="sec5-right-blocks-sketch-type-label">Миниатюра</label>
-						</form>
+							<div class="sec5-right-blocks-sketch-type-label">Миниатюра</div>
+						</div>
 					</div>
 
 					<div class="sec5-right-blocks-btns">
